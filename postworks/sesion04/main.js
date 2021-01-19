@@ -2,7 +2,7 @@
 
 //Ejercicio 2
 function chunk(array, size){
-    var arreglo = [...array];//copia de arreglo y no locación de memoria
+    var arreglo = [...array];//copia de arreglo (... = spread) y no locación de memoria
     var nvo=[];
     while(arreglo.length>0){
         nvo.push(arreglo.splice(0,size)); //si ya no hay elementos corta hasta donde exista alguno
