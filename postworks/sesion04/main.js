@@ -60,7 +60,6 @@ function frequency(string) {
     for(var i=0; i<cadena.length;i++){
         if(result[cadena[i]] == undefined){//si la propiedad no existe la agrega con valor de 1
             result[cadena[i]] = 1;
-          
         }
         else{
            result[cadena[i]]++; //si ya existe le suma 1 por cada coincidencia
