@@ -3,14 +3,14 @@
 function deepEqual(a, b) {
     // Fancy
     if(typeof(a)==="object" && typeof(b)==="object"){
-        var keysA = Object.keys(a).sort();
+        var keysA = Object.keys(a).sort();// ordenar arreglo por default ascendente
         var keysB = Object.keys(b).sort();
         
-        if(JSON.stringify(keysA).includes(JSON.stringify(keysB))) {
-           return  keysA.map(element => {
+        if(JSON.stringify(keysA).includes(JSON.stringify(keysB))) { // pasar a String y ===
+           return  keysA.map(element => { //para recorrer el arreglo de las llaves, reemplazando el valor del elemento con nuestro return
                return deepEqual(a[element],b[element])
-            }).reduce((element,next) => {
-                return(element===next);
+            }).reduce((element,next) => { //toma elemento actual y anterior para reemplazar formar un solo valor
+                return(element===next); //condición del reduce que se guarda
             });
         }
         else{
