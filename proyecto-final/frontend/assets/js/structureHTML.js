@@ -97,7 +97,24 @@ const structureHTML = [
             {
                 elementType: 'div',
                 id: "outputNotes"
-            }
+            },
+            /* TASKS COUNTER */
+            {
+                elementType: 'hr'
+            },
+            {
+                elementType: 'div',
+                childs: [
+                    {
+                        elementType: 'p',
+                        id: 'tasksCounterLabel',
+                        attributes: {
+                            textContent: '0/5 Task(s) completed'
+                        }
+                    }
+                ]
+            },
+            /* TASKS COUNTER */
         ]
     },
     /* SHOW TASKS */
@@ -142,6 +159,19 @@ const structureHTML = [
                 ]
             }
         ]
-    }
+    },
     /* MODAL EDIT */
+    /* MODAL DETAILS */
+    {
+        elementType: 'div',
+        id: 'modalDetails',
+        childs: [
+            {
+                elementType: 'div',
+                id: 'divDetails'
+            }
+        ]
+    }
+    /* MODAL DETAILS */
+
 ];

@@ -45,17 +45,18 @@ function toggleNote(event) {
 }
 
 function openModal(event) {
+    console.log(event.target.dataset.modal)
     const id = event.target.dataset.id;
-    const modal = event.target.dataset.modal;
     const modalElement = document.getElementById(event.target.dataset.modal);
     /* styles modal */
     /* modalElement.style.display='none'; */
-    switch (modal) {
+    switch (event.target.dataset.modal) {
         case 'modalEdit':
-            let inputEdit = document.getElementById('inputEditNote');
-            console.log(getTaskById(id).task);
-            inputEdit.value = getTaskById(id).task;
-            inputEdit.dataset.id = id;
+            setEditTask(id);
+            break;
+        case 'modalDetails':
+            setDetailTasks(id);
+            break;
     }
 }
 
