@@ -23,6 +23,7 @@ function toggleTask(id) {
         if (id == el.id) {
             tasks[index].status = !tasks[index].status;
             saveTasks(tasks);
+            console.log('[manageNotes] Esto no hace nada, hay que refactorizar');
             return tasks[index].status;
         }
     });

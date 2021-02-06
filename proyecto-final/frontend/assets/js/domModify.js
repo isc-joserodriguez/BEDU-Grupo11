@@ -74,7 +74,6 @@ const createDivTask = (task) => {
                     textContent: task.task
                 }
             },
-
             {
                 elementType: 'button',
                 attributes: {
@@ -122,4 +121,21 @@ const deleteDivTask = (element) => {
 
 const editLabelTask = (text, id) => {
     document.getElementById(`taskLabel${id}`).textContent = text;
+}
+
+const filterTasks = (filter) => {
+    document.getElementById('outputNotes').remove();
+    createElement({ elementType: 'div', id: 'outputNotes' }, document.getElementById('rootNotes'));
+    let filteredTasks = getTasks();
+    switch (filter) {
+        case 'pending':
+            filteredTasks = filteredTasks.filter(el => (el.status == false)).map(el => createDivTask(el));
+            console.log(filteredTasks);
+            break;
+        case 'completed':
+            filteredTasks = filteredTasks.filter(el => (el.status == true)).map(el => createDivTask(el));
+            break;
+        default: addChilds(addTaskToDiv(), document.getElementById('outputNotes'))
+    }
+    addChilds(filteredTasks, document.getElementById('outputNotes'))
 }
