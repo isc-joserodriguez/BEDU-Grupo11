@@ -3,7 +3,7 @@ const structureHTML = [
         elementType: 'img',
         classes: ['class1', 'class2', 'class3'],
         attributes: {
-            src: 'https://picsum.photos/300/200'
+            src: 'https://picsum.photos/300/200',
         },
         id: 'elementID2',
         elementEvents: [
@@ -13,13 +13,14 @@ const structureHTML = [
             }
         ]
     },
+
     {
         elementType: 'button',
         classes: ['class1', 'class2', 'class3'],
         attributes: {
-            textContent: 'boton'
+            textContent: 'Texto del botón'
         },
-        id: 'elementID3',
+        id: 'buttonNuevo',
     },
     {
         elementType: 'div',
@@ -51,41 +52,46 @@ const structureHTML = [
                 },
                 id: 'elementID7',
             },
+            {elementType:'hr'},
+            /* FORM */
+            {
+                elementType:'div',
+                childs:[
+                    {
+                        elementType:'form',
+                        childs:[
+                            {
+                                elementType:'input',
+                                classes:['textField'],
+                                attributes:{
+                                    type:'text',
+                                    placeholder:'Add a new task'
+                                }
+                            },
+                            {
+                                elementType:'input',
+                                classes:['submitButton'],
+                                attributes:{
+                                    type:'submit'
+                                }
+                            }
+                        ]
+                    }
+                ]
+            }
         ]
     },
 ];
 
-/* const objHTML = {
-    elementType: 'div',
-    classes: ['class1', 'class2', 'class3'],
-    id: 'elementID',
-    childs: [
-        {
-            elementType: 'img',
-            classes: ['class1', 'class2', 'class3'],
-
-            attributes: {
-                src: 'https://picsum.photos/300/200'
-            },
-            id: 'elementID2',
-        },
-        {
-            elementType: 'button',
-            classes: ['class1', 'class2', 'class3'],
-            attributes:{
-                textContent:'boton'
-            },
-            id: 'elementID3',
-        },
-        {
-            elementType: 'p',
-            classes: ['class1', 'class2', 'class3'],
-            attributes:{
-                textContent:'tagP'
-            },
-            id: 'elementID4',
-        },
-    ]
-} */
-
 addChilds(structureHTML, document.getElementById('app'));
+
+/*
+{
+    task:'Go to work',
+    status:false,
+    creationDate:...,
+    finishedDate:...,
+    color: 0,
+
+}
+*/

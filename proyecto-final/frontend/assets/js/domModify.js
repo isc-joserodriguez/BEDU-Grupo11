@@ -27,5 +27,5 @@ const addClasses = (element, classes) => {
 }
 
 const removeClass = (element, removedClass) => {
-    element.classList = [...element.classList].filter(elementClass=>elementClass!==removedClass).join(' ');
+    element.classList = [...element.classList].filter(elementClass => elementClass !== removedClass).join(' ');
 }
