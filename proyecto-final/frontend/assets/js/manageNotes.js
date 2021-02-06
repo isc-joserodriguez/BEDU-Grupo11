@@ -16,3 +16,14 @@ function deleteTask(id){
     let tasks = getTasks();
     saveTasks(tasks.filter(el=>id!=el.id));
 }
+
+function toggleTask (id){
+    let tasks = getTasks();
+    tasks.forEach((el,index)=>{
+        if(id==el.id){
+            tasks[index].status=!tasks[index].status;
+            saveTasks(tasks);
+            return tasks[index].status;
+        }
+    });
+}
