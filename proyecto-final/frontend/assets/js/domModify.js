@@ -36,10 +36,10 @@ const removeClass = (element, removedClass) => {
 }
 
 const addTaskToDiv = () => {
-    return [...getTasks()].map(task=>createDivTask(task));
+    return [...getTasks()].map(task => createDivTask(task));
 }
 
-const createDivTask=(task)=>{
+const createDivTask = (task) => {
     /* {id: 1,
         task: "dasda",
         status: false,
@@ -49,16 +49,16 @@ const createDivTask=(task)=>{
     }, */
     return {
         elementType: 'div',
-        id:task.id,
+        id: task.id,
         childs: [
             {
                 elementType: 'input',
                 attributes: {
                     type: 'checkbox',
-                    checked:task.status
+                    checked: task.status
                 },
-                datasets:{
-                    id:task.id
+                datasets: {
+                    id: task.id
                 },
                 elementEvents: [
                     {
@@ -69,6 +69,7 @@ const createDivTask=(task)=>{
             },
             {
                 elementType: 'label',
+                id: `taskLabel${task.id}`,
                 attributes: {
                     textContent: task.task
                 }
@@ -78,7 +79,17 @@ const createDivTask=(task)=>{
                 elementType: 'button',
                 attributes: {
                     textContent: 'Edit'
-                }
+                },
+                datasets: {
+                    id: task.id,
+                    modal: 'modalEdit'
+                },
+                elementEvents: [
+                    {
+                        elementListener: 'click',
+                        elementFunction: (event) => openModal(event)
+                    }
+                ]
             },
             {
                 elementType: 'button',
@@ -91,8 +102,8 @@ const createDivTask=(task)=>{
                 attributes: {
                     textContent: 'Delete',
                 },
-                datasets:{
-                    id:task.id
+                datasets: {
+                    id: task.id
                 },
                 elementEvents: [
                     {
@@ -105,6 +116,10 @@ const createDivTask=(task)=>{
     }
 }
 
-const deleteDivTask=(element)=>{
+const deleteDivTask = (element) => {
     element.parentNode.removeChild(element);
+}
+
+const editLabelTask = (text, id) => {
+    document.getElementById(`taskLabel${id}`).textContent = text;
 }
