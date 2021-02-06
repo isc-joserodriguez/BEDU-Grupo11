@@ -41,10 +41,64 @@ const structureHTML = [
         ]
     },
     /* FORM NEWTASK */
+
+    /* FILTER */
+    {
+        elementType: 'div',
+        childs: [
+            {
+                elementType: 'label',
+                attributes: {
+                    textContent: 'Filter:'
+                }
+            },
+            {
+                elementType: 'select',
+                id: 'selectFilter',
+                elementEvents: [
+                    {
+                        elementListener: 'change',
+                        elementFunction: (event) => filterNotes(event)
+                    }
+                ],
+                childs: [
+                    {
+                        elementType: 'option',
+                        attributes: {
+                            value: 'all',
+                            textContent: 'All'
+                        }
+                    },
+                    {
+                        elementType: 'option',
+                        attributes: {
+                            value: 'pending',
+                            textContent: 'Pending'
+                        }
+                    },
+                    {
+                        elementType: 'option',
+                        attributes: {
+                            value: 'completed',
+                            textContent: 'Completed'
+                        }
+                    }
+                ]
+            }
+        ]
+    },
+    /* FILTER */
+
     /* SHOW TASKS */
     {
         elementType: 'div',
-        id: "outputNotes"
+        id: "rootNotes",
+        childs: [
+            {
+                elementType: 'div',
+                id: "outputNotes"
+            }
+        ]
     },
     /* SHOW TASKS */
     /* MODAL EDIT */
