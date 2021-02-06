@@ -77,3 +77,7 @@ function editNote(event) {
         event.preventDefault();
     }
 }
+
+function filterNotes(event) {
+    filterTasks(event.target.value);
+}
