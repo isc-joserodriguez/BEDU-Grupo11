@@ -19,25 +19,25 @@ const createElement = (element, father) => {
     }
     if (element.childs) addChilds(element.childs, tempElement);
     father.appendChild(tempElement);
-}
+};
 
 const addChilds = (arrayChilds, father) => {
     arrayChilds.forEach(element => {
         createElement(element, father);
     });
-}
+};
 
 const addClasses = (element, classes) => {
     element.classList = [... new Set([...element.classList].concat(classes))].join(' ');
-}
+};
 
 const removeClass = (element, removedClass) => {
     element.classList = [...element.classList].filter(elementClass => elementClass !== removedClass).join(' ');
-}
+};
 
 const addTaskToDiv = () => {
     return [...getTasks()].map(task => createDivTask(task));
-}
+};
 
 const createDivTask = (task) => {
     /* {id: 1,
@@ -46,7 +46,7 @@ const createDivTask = (task) => {
         creationDate: "5/2/2021 21:52:54",
         finishedDate: null,
         color: []
-    }, */
+    }*/
     return {
         elementType: 'div',
         id: task.id,
@@ -94,7 +94,17 @@ const createDivTask = (task) => {
                 elementType: 'button',
                 attributes: {
                     textContent: 'Details'
-                }
+                },
+                datasets: {
+                    id: task.id,
+                    modal: 'modalDetails'
+                },
+                elementEvents: [
+                    {
+                        elementListener: 'click',
+                        elementFunction: (event) => openModal(event)
+                    }
+                ]
             },
             {
                 elementType: 'button',
@@ -113,15 +123,15 @@ const createDivTask = (task) => {
             }
         ]
     }
-}
+};
 
 const deleteDivTask = (element) => {
     element.parentNode.removeChild(element);
-}
+};
 
 const editLabelTask = (text, id) => {
     document.getElementById(`taskLabel${id}`).textContent = text;
-}
+};
 
 const filterTasks = (filter) => {
     document.getElementById('outputNotes').remove();
@@ -130,7 +140,6 @@ const filterTasks = (filter) => {
     switch (filter) {
         case 'pending':
             filteredTasks = filteredTasks.filter(el => (el.status == false)).map(el => createDivTask(el));
-            console.log(filteredTasks);
             break;
         case 'completed':
             filteredTasks = filteredTasks.filter(el => (el.status == true)).map(el => createDivTask(el));
@@ -138,4 +147,69 @@ const filterTasks = (filter) => {
         default: addChilds(addTaskToDiv(), document.getElementById('outputNotes'))
     }
     addChilds(filteredTasks, document.getElementById('outputNotes'))
-}
+};
+
+const setEditTask = (id) => {
+    let inputEdit = document.getElementById('inputEditNote');
+    inputEdit.value = getTaskById(id).task;
+    inputEdit.dataset.id = id;
+};
+
+const setDetailTasks = (id) => {
+    document.getElementById('divDetails').remove();
+    createElement({
+        elementType: 'div',
+        id: 'divDetails'
+    }, document.getElementById('modalDetails'));
+    let task = getTaskById(id);
+    addChilds([
+        {
+            elementType: 'h1',
+            attributes: {
+                textContent: task.task
+            },
+        },
+        {
+            elementType: 'p',
+            attributes: {
+                textContent: 'Creation Date: '
+            },
+            childs: [
+                {
+                    elementType: 'span',
+                    attributes: {
+                        textContent: task.creationDate
+                    },
+                }
+            ]
+        },
+        {
+            elementType: 'p',
+            attributes: {
+                textContent: 'Finished Date: '
+            },
+            childs: [
+                {
+                    elementType: 'span',
+                    attributes: {
+                        textContent: task.finishedDate
+                    },
+                }
+            ]
+        },
+        {
+            elementType: 'p',
+            attributes: {
+                textContent: 'Status: '
+            },
+            childs: [
+                {
+                    elementType: 'span',
+                    attributes: {
+                        textContent: (task.status) ? 'Finished' : 'Pending'
+                    },
+                }
+            ]
+        }
+    ], document.getElementById('divDetails'));
+};
