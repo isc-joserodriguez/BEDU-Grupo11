@@ -44,6 +44,7 @@ const createDivTask=(task)=>{
     }, */
     return {
         elementType: 'div',
+        id:task.id,
         childs: [
             {
                 elementType: 'input',
@@ -79,4 +80,8 @@ const createDivTask=(task)=>{
             }
         ]
     }
+}
+
+const deleteDivTask=(element)=>{
+    element.parentNode.removeChild(element);
 }
