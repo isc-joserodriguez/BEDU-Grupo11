@@ -5,7 +5,7 @@ function createDate(){
   }
 
   function consecutive(){
-    return (JSON.parse(localStorage.getItem('tareas')))? 
+    return (localStorage.getItem('tareas') && localStorage.getItem('tareas')!="[]" )? 
     JSON.parse(localStorage.getItem('tareas'))[JSON.parse(localStorage.getItem('tareas')).length-1].id+1:
     1
   }

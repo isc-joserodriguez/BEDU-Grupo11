@@ -14,5 +14,5 @@ function createNewTask(task){
 
 function deleteTask(id){
     let tasks = getTasks();
-    saveTasks(tasks.filter((el,index)=>id!=index));
+    saveTasks(tasks.filter(el=>id!=el.id));
 }
