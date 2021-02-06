@@ -65,15 +65,22 @@ const structureHTML = [
                                 classes:['textField'],
                                 attributes:{
                                     type:'text',
-                                    placeholder:'Add a new task'
-                                }
+                                    placeholder:'Add a new task',
+                                    value: ''
+                                },
+                                elementEvents:[
+                                    {
+                                        elementListener: 'keydown',
+                                        elementFunction: (event)=>addNote(event)
+                                    }
+                                ]
                             },
                             {
                                 elementType:'input',
                                 classes:['submitButton'],
                                 attributes:{
                                     type:'submit'
-                                }
+                                },
                             }
                         ]
                     }
