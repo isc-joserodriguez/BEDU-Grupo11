@@ -62,6 +62,7 @@ const structureHTML = [
                         childs:[
                             {
                                 elementType:'input',
+                                id:'inputNote',
                                 classes:['textField'],
                                 attributes:{
                                     type:'text',
@@ -81,6 +82,12 @@ const structureHTML = [
                                 attributes:{
                                     type:'submit'
                                 },
+                                elementEvents:[
+                                    {
+                                        elementListener: 'click',
+                                        elementFunction: (event)=>addNote(event)
+                                    }
+                                ]
                             }
                         ]
                     }
