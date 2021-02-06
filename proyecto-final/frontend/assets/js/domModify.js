@@ -69,6 +69,7 @@ const createDivTask = (task) => {
             },
             {
                 elementType: 'label',
+                id: `taskLabel${task.id}`,
                 attributes: {
                     textContent: task.task
                 }
@@ -81,7 +82,7 @@ const createDivTask = (task) => {
                 },
                 datasets: {
                     id: task.id,
-                    modal:'modalEdit'
+                    modal: 'modalEdit'
                 },
                 elementEvents: [
                     {
@@ -117,4 +118,8 @@ const createDivTask = (task) => {
 
 const deleteDivTask = (element) => {
     element.parentNode.removeChild(element);
+}
+
+const editLabelTask = (text, id) => {
+    document.getElementById(`taskLabel${id}`).textContent = text;
 }

@@ -38,3 +38,13 @@ function getTaskById(id) {
     });
     return element;
 }
+
+function editTask(task, id) {
+    let tasks = getTasks();
+    tasks.forEach((el, index) => {
+        if (id == el.id) {
+            tasks[index] = task;
+            saveTasks(tasks);
+        }
+    });
+}

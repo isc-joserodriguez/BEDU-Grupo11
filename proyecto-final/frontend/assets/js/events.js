@@ -58,3 +58,22 @@ function openModal(event) {
             inputEdit.dataset.id = id;
     }
 }
+
+function editNote(event) {
+    if (event.key == "Enter") {
+        if (document.getElementById('inputEditNote').value) {
+            editTask({ ...getTaskById(event.target.dataset.id), task: event.target.value }, event.target.dataset.id);
+            editLabelTask(event.target.value, event.target.dataset.id);
+        }//falta mensaje cuando es vacío para que el usuario sepa
+        event.target.value = "";
+        event.preventDefault();
+    }
+    else if (!event.key) {
+        if (document.getElementById('inputEditNote').value) {
+            createNewTask(newTask);
+            createElement(createDivTask(newTask), document.getElementById('outputNotes'));
+        }//falta mensaje cuando es vacío para que el usuario sepa
+        document.getElementById('inputEditNote').value = "";
+        event.preventDefault();
+    }
+}
