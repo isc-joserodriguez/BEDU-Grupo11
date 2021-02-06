@@ -29,3 +29,54 @@ const addClasses = (element, classes) => {
 const removeClass = (element, removedClass) => {
     element.classList = [...element.classList].filter(elementClass => elementClass !== removedClass).join(' ');
 }
+
+const addTaskToDiv = () => {
+    return [...getTasks()].map(task=>createDivTask(task));
+}
+
+const createDivTask=(task)=>{
+    /* {id: 1,
+        task: "dasda",
+        status: false,
+        creationDate: "5/2/2021 21:52:54",
+        finishedDate: null,
+        color: []
+    }, */
+    return {
+        elementType: 'div',
+        childs: [
+            {
+                elementType: 'input',
+                attributes: {
+                    type: 'checkbox',
+                    checked:task.status
+                }
+            },
+            {
+                elementType: 'label',
+                attributes: {
+                    textContent: task.task
+                }
+            },
+
+            {
+                elementType: 'button',
+                attributes: {
+                    textContent: 'Edit'
+                }
+            },
+            {
+                elementType: 'button',
+                attributes: {
+                    textContent: 'Details'
+                }
+            },
+            {
+                elementType: 'button',
+                attributes: {
+                    textContent: 'Delete'
+                }
+            }
+        ]
+    }
+}
