@@ -61,7 +61,7 @@ function openModal(event) {
 
 function editNote(event) {
     if (event.key == "Enter") {
-        if (document.getElementById('inputEditNote').value) {
+        if (event.target.value) {
             editTask({ ...getTaskById(event.target.dataset.id), task: event.target.value }, event.target.dataset.id);
             editLabelTask(event.target.value, event.target.dataset.id);
         }//falta mensaje cuando es vacío para que el usuario sepa
@@ -70,8 +70,8 @@ function editNote(event) {
     }
     else if (!event.key) {
         if (document.getElementById('inputEditNote').value) {
-            createNewTask(newTask);
-            createElement(createDivTask(newTask), document.getElementById('outputNotes'));
+            editTask({ ...getTaskById(document.getElementById('inputEditNote').dataset.id), task: document.getElementById('inputEditNote').value }, document.getElementById('inputEditNote').dataset.id);
+            editLabelTask(document.getElementById('inputEditNote').value, document.getElementById('inputEditNote').dataset.id);
         }//falta mensaje cuando es vacío para que el usuario sepa
         document.getElementById('inputEditNote').value = "";
         event.preventDefault();
