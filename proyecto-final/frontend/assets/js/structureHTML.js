@@ -27,7 +27,7 @@ const structureHTML = [
                         classes: ['submitButton'],
                         attributes: {
                             type: 'submit',
-                            value:'Save'
+                            value: 'Save'
                         },
                         elementEvents: [
                             {
@@ -76,7 +76,7 @@ const structureHTML = [
                         classes: ['submitButton'],
                         attributes: {
                             type: 'submit',
-                            value:'Edit'
+                            value: 'Edit'
                         },
                         elementEvents: [
                             {
