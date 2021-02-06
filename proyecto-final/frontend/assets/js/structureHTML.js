@@ -1,5 +1,5 @@
 const structureHTML = [
-    /* FORM INIT */
+    /* FORM NEWTASK */
     {
         elementType: 'div',
         childs: [
@@ -26,7 +26,8 @@ const structureHTML = [
                         elementType: 'input',
                         classes: ['submitButton'],
                         attributes: {
-                            type: 'submit'
+                            type: 'submit',
+                            value:'Save'
                         },
                         elementEvents: [
                             {
@@ -39,11 +40,54 @@ const structureHTML = [
             }
         ]
     },
-    /* FORM END */
+    /* FORM NEWTASK */
     /* SHOW TASKS */
     {
         elementType: 'div',
-        id:"outputNotes"
-    }
+        id: "outputNotes"
+    },
     /* SHOW TASKS */
+    /* MODAL EDIT */
+    {
+        elementType: 'div',
+        id: 'modalEdit',
+        childs: [
+            {
+                elementType: 'form',
+                childs: [
+                    {
+                        elementType: 'input',
+                        id: 'inputEditNote',
+                        classes: ['textField'],
+                        attributes: {
+                            type: 'text',
+                            placeholder: 'Enter new name task',
+                            value: ''
+                        },
+                        elementEvents: [
+                            {
+                                elementListener: 'keydown',
+                                elementFunction: (event) => editNote(event)
+                            }
+                        ]
+                    },
+                    {
+                        elementType: 'input',
+                        classes: ['submitButton'],
+                        attributes: {
+                            type: 'submit',
+                            value:'Edit'
+                        },
+                        elementEvents: [
+                            {
+                                elementListener: 'click',
+                                elementFunction: (event) => editNote(event)
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+    /* MODAL EDIT */
 ];
