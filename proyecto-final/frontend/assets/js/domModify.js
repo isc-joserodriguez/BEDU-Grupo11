@@ -7,6 +7,11 @@ const createElement = (element, father) => {
             tempElement[attribute] = element.attributes[attribute];
         }
     }
+    if (element.datasets) {
+        for (dataset in element.datasets) {
+            tempElement.dataset[dataset] = element.datasets[dataset];
+        }
+    }
     if (element.elementEvents) {
         element.elementEvents.forEach(elementEvent => {
             tempElement.addEventListener(elementEvent.elementListener, elementEvent.elementFunction)
@@ -75,8 +80,17 @@ const createDivTask=(task)=>{
             {
                 elementType: 'button',
                 attributes: {
-                    textContent: 'Delete'
-                }
+                    textContent: 'Delete',
+                },
+                datasets:{
+                    id:task.id
+                },
+                elementEvents: [
+                    {
+                        elementListener: 'click',
+                        elementFunction: (event) => removeNote(event)
+                    }
+                ]
             }
         ]
     }

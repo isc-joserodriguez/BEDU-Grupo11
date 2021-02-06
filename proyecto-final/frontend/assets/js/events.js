@@ -33,3 +33,9 @@ function addNote(event) {
         event.preventDefault();
     }
 }
+
+function removeNote(event){
+    const idRemove=event.target.dataset.id;
+    deleteTask(idRemove);
+    deleteDivTask(document.getElementById(idRemove));
+}
