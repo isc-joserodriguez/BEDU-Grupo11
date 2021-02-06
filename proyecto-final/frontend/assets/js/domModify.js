@@ -56,7 +56,16 @@ const createDivTask=(task)=>{
                 attributes: {
                     type: 'checkbox',
                     checked:task.status
-                }
+                },
+                datasets:{
+                    id:task.id
+                },
+                elementEvents: [
+                    {
+                        elementListener: 'change',
+                        elementFunction: (event) => toggleNote(event)
+                    }
+                ]
             },
             {
                 elementType: 'label',
