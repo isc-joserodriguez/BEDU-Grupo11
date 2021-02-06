@@ -39,3 +39,7 @@ function removeNote(event){
     deleteTask(idRemove);
     deleteDivTask(document.getElementById(idRemove));
 }
+
+function toggleNote(event){
+    toggleTask (event.target.dataset.id);
+}
