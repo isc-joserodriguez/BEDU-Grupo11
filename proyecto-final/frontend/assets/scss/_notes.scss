@@ -15,7 +15,7 @@
     max-height: 80%;
   }
 
-  #newTaskForm {
+  form {
     width: 100%;
     display: flex;
     justify-content: center;
@@ -37,6 +37,69 @@
 
   #divFilter {
     text-align: right;
+  }
+
+  #addButton,
+  #saveButton,
+  #editButton,
+  #detailButton,
+  #deleteButton,
+  .closeButton {
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    padding: 0 5px;
+    cursor: pointer;
+  }
+
+  #addButton {
+    background-color: $green;
+    border-radius: 0px 5px 5px 0;
+  }
+
+  #saveButton {
+    background-color: $green;
+    border-radius: 0px 5px 5px 0;
+  }
+
+  #editButton,
+  #detailButton,
+  #deleteButton,
+  .closeButton {
+    margin: 5px 3px;
+    height: 30px;
+    width: 30px;
+  }
+
+  .closeButton {
+    background-color: $purple;
+    margin-left: 0;
+  }
+
+  #editButton {
+    background-color: $lightGreen;
+  }
+  #detailButton {
+    background-color: $blueGreen;
+  }
+  #deleteButton {
+    background-color: $red;
+  }
+
+  #tasksCounterLabel {
+    margin: 20px 0 10px 0;
+    font-size: 14px;
+    display: flex;
+    justify-content: center;
+    color: $gray;
+  }
+
+  #selectFilter {
+    margin: 0 10px;
+    font-family: $montserrat;
+    border: 1px solid $lightGray;
+    height: 25px;
   }
 
   .singleTask {
@@ -62,71 +125,4 @@
       display: flex;
     }
   }
-}
-
-#addButton,
-#saveButton,
-#editButton,
-#detailButton,
-#deleteButton,
-#closeButton {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 5px;
-  padding: 0 5px;
-  cursor: pointer;
-}
-
-#editButton,
-#detailButton,
-#deleteButton {
-  margin: 5px 3px;
-}
-#addButton {
-  background-color: $green;
-  border-radius: 0px 5px 5px 0;
-}
-
-#saveButton {
-  background-color: $green;
-  border-radius: 0px 5px 5px 0;
-}
-#editButton {
-  background-color: $lightGreen;
-  height: 30px;
-  width: 30px;
-}
-#detailButton {
-  background-color: $blueGreen;
-  height: 30px;
-  width: 30px;
-}
-#deleteButton {
-  background-color: $red;
-  height: 30px;
-  width: 30px;
-}
-
-#closeButton {
-  background-color: #8139ed;
-  display: inline;
-  height: 30px;
-  width: 30px;
-  
-}
-
-#tasksCounterLabel {
-  margin: 20px 0 10px 0;
-  font-size: 14px;
-  display: flex;
-  justify-content: center;
-  color: $gray;
-}
-
-#selectFilter {
-  margin: 0 10px;
-  font-family: $montserrat;
-  border: 1px solid $lightGray;
-  height: 25px;
 }

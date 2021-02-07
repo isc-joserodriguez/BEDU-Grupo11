@@ -87,26 +87,56 @@ body {
   text-align: center;
 }
 
+#app {
+  position: relative;
+}
+
 .showModal {
   display: flex;
   background-color: #0000005b;
-  position: fixed;
+  position: absolute;
   top: 0;
   right: 0;
   bottom: 0;
   left: 0;
 }
-.showModal #divDetails:not(#closeButton) {
+.showModal > div {
+  text-align: center;
   background-color: white;
-  /* max-width: 80%;
-  padding: 10px 20px; */
+  max-width: 80%;
+  padding: 35px 35px;
+  border-radius: 10px;
   margin: auto;
   position: relative;
-  bottom: 35;
+  bottom: 19%;
+}
+.showModal > div .descriptionShort {
+  margin: 15px 0;
+  background-color: #39bded44;
+}
+.showModal > div .descriptionLarge {
+  margin: 15px 0;
+  background-color: #39bded44;
+}
+.showModal > div .titleModal {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #8d12b3;
 }
 
 .hideModal {
   display: none;
+}
+
+.statusPending {
+  color: #33ccff;
+  font-weight: 700;
+}
+
+.statusFinished {
+  color: #00ff99;
+  font-weight: 700;
 }
 
 #root {
@@ -125,7 +155,7 @@ body {
   filter: brightness(0) invert(1);
   max-height: 80%;
 }
-#root #newTaskForm {
+#root form {
   width: 100%;
   display: flex;
   justify-content: center;
@@ -161,6 +191,61 @@ body {
 #root #divFilter {
   text-align: right;
 }
+#root #addButton,
+#root #saveButton,
+#root #editButton,
+#root #detailButton,
+#root #deleteButton,
+#root .closeButton {
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  padding: 0 5px;
+  cursor: pointer;
+}
+#root #addButton {
+  background-color: #00ff99;
+  border-radius: 0px 5px 5px 0;
+}
+#root #saveButton {
+  background-color: #00ff99;
+  border-radius: 0px 5px 5px 0;
+}
+#root #editButton,
+#root #detailButton,
+#root #deleteButton,
+#root .closeButton {
+  margin: 5px 3px;
+  height: 30px;
+  width: 30px;
+}
+#root .closeButton {
+  background-color: #8139ed;
+  margin-left: 0;
+}
+#root #editButton {
+  background-color: #00ffae;
+}
+#root #detailButton {
+  background-color: #00ffd5;
+}
+#root #deleteButton {
+  background-color: #f0695a;
+}
+#root #tasksCounterLabel {
+  margin: 20px 0 10px 0;
+  font-size: 14px;
+  display: flex;
+  justify-content: center;
+  color: #777777;
+}
+#root #selectFilter {
+  margin: 0 10px;
+  font-family: "Montserrat", sans-serif;
+  border: 1px solid #dbe1eb;
+  height: 25px;
+}
 #root .singleTask {
   display: flex;
   justify-content: space-between;
@@ -180,76 +265,6 @@ body {
 }
 #root .singleTask #buttonsTask {
   display: flex;
-}
-
-#addButton,
-#saveButton,
-#editButton,
-#detailButton,
-#deleteButton,
-#closeButton {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 5px;
-  padding: 0 5px;
-  cursor: pointer;
-}
-
-#editButton,
-#detailButton,
-#deleteButton {
-  margin: 5px 3px;
-}
-
-#addButton {
-  background-color: #00ff99;
-  border-radius: 0px 5px 5px 0;
-}
-
-#saveButton {
-  background-color: #00ff99;
-  border-radius: 0px 5px 5px 0;
-}
-
-#editButton {
-  background-color: #00ffae;
-  height: 30px;
-  width: 30px;
-}
-
-#detailButton {
-  background-color: #00ffd5;
-  height: 30px;
-  width: 30px;
-}
-
-#deleteButton {
-  background-color: #f0695a;
-  height: 30px;
-  width: 30px;
-}
-
-#closeButton {
-  background-color: #8139ed;
-  display: inline;
-  height: 30px;
-  width: 30px;
-}
-
-#tasksCounterLabel {
-  margin: 20px 0 10px 0;
-  font-size: 14px;
-  display: flex;
-  justify-content: center;
-  color: #777777;
-}
-
-#selectFilter {
-  margin: 0 10px;
-  font-family: "Montserrat", sans-serif;
-  border: 1px solid #dbe1eb;
-  height: 25px;
 }
 
 /*# sourceMappingURL=main.css.map */

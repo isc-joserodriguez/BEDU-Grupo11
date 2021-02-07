@@ -11,6 +11,6 @@ function consecutive() {
 }
 
 const toggleModal=(id)=>{
-  let modal= document.getElementById(event.target.dataset.modal);
+  let modal= document.getElementById(id);
   modal.classList=[...modal.classList][0]==='hideModal'?'showModal':'hideModal';
 }

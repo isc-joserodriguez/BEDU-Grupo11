@@ -60,9 +60,7 @@ function openModal(event) {
 }
 
 function hideModal(event) {
-    const modalElement = document.getElementById(event.target.dataset.modal);
-    /* styles modal */
-    modalElement.style.display = 'none';
+    toggleModal(event.target.dataset.modal);
 }
 
 function editNote(event) {
@@ -72,6 +70,7 @@ function editNote(event) {
             editLabelTask(event.target.value, event.target.dataset.id);
         }//falta mensaje cuando es vacío para que el usuario sepa
         event.target.value = "";
+        toggleModal('modalEdit');
         event.preventDefault();
     }
     else if (!event.key) {
@@ -80,6 +79,7 @@ function editNote(event) {
             editLabelTask(document.getElementById('inputEditNote').value, document.getElementById('inputEditNote').dataset.id);
         }//falta mensaje cuando es vacío para que el usuario sepa
         document.getElementById('inputEditNote').value = "";
+        toggleModal('modalEdit');
         event.preventDefault();
     }
 }

@@ -21,204 +21,240 @@ const structureHTML = [
     },
     /* HEADER */
     {
-        elementType:'div',
-        id:'container',
-        childs:[
+        elementType: 'div',
+        id: 'container',
+        childs: [
             {
                 elementType: 'div',
-                id:'root',
-                childs:[
+                id: 'root',
+                childs: [
                     /* FORM NEWTASK */
-            {
-                elementType: 'div',
-                childs: [
-                    {
-                        elementType: 'form',
-                        id: 'newTaskForm',
-                        childs: [
-                            {
-                                elementType: 'input',
-                                id: 'inputNote',
-                                classes: ['textField'],
-                                attributes: {
-                                    type: 'text',
-                                    placeholder: 'Add a new task',
-                                    value: ''
-                                },
-                                elementEvents: [
-                                    {
-                                        elementListener: 'keydown',
-                                        elementFunction: (event) => addNote(event)
-                                    }
-                                ]
-                            },
-                            {
-                                elementType:'div',
-                                id:'addButton',
-                        childs:[{
-                            elementType: 'img',
-                                
-                                classes:["actionButton"],
-                                attributes: {
-                                    src:'./assets/img/icons/add.svg'
-                                },
-                                elementEvents: [
-                                    {
-                                        elementListener: 'click',
-                                        elementFunction: (event) => addNote(event)
-                                    }
-                                ]
-                        }]
-                            }
-                        ]
-                    }
-                ]
-            },
-            /* FORM NEWTASK */
-        
-            /* FILTER */
-            {
-                elementType: 'div',
-                id:'divFilter',
-                childs: [
-                    {
-                        elementType: 'label',
-                        attributes: {
-                            textContent: 'Filter:'
-                        }
-                    },
-                    {
-                        elementType: 'select',
-                        id: 'selectFilter',
-                        elementEvents: [
-                            {
-                                elementListener: 'change',
-                                elementFunction: (event) => filterNotes(event)
-                            }
-                        ],
-                        childs: [
-                            {
-                                elementType: 'option',
-                                attributes: {
-                                    value: 'all',
-                                    textContent: 'All'
-                                }
-                            },
-                            {
-                                elementType: 'option',
-                                attributes: {
-                                    value: 'pending',
-                                    textContent: 'Pending'
-                                }
-                            },
-                            {
-                                elementType: 'option',
-                                attributes: {
-                                    value: 'completed',
-                                    textContent: 'Completed'
-                                }
-                            }
-                        ]
-                    }
-                ]
-            },
-            /* FILTER */
-        
-            /* SHOW TASKS */
-            {
-                elementType: 'div',
-                id: "rootNotes",
-                childs: [
                     {
                         elementType: 'div',
-                        id: "outputNotes"
-                    },
-                ]
-            },
-            /* SHOW TASKS */
-            /* TASKS COUNTER */
-            {
-                elementType: 'hr'
-            },
-            {
-                elementType: 'div',
-                    childs: [
-                    {
-                        elementType: 'p',
-                        id: 'tasksCounterLabel',
-                        attributes: {
-                            textContent: `${countCompleted()}/${countTotal()} Task(s) completed`
-                        }
-                    }
-                ]
-            },
-            /* TASKS COUNTER */
-            /* MODAL EDIT */
-    {
-        elementType: 'div',
-        id: 'modalEdit',
-        classes:['hideModal'],
-        childs: [
-            {
-                elementType:'div',
-                childs:[
-                    {
-                        elementType: 'form',
                         childs: [
                             {
-                                elementType: 'input',
-                                id: 'inputEditNote',
-                                classes: ['textField'],
-                                attributes: {
-                                    type: 'text',
-                                    placeholder: 'Enter a new task name',
-                                    value: ''
-                                },
-                                elementEvents: [
+                                elementType: 'form',
+                                id: 'newTaskForm',
+                                childs: [
                                     {
-                                        elementListener: 'keydown',
-                                        elementFunction: (event) => editNote(event)
+                                        elementType: 'input',
+                                        id: 'inputNote',
+                                        classes: ['textField'],
+                                        attributes: {
+                                            type: 'text',
+                                            placeholder: 'Add a new task',
+                                            value: ''
+                                        },
+                                        elementEvents: [
+                                            {
+                                                elementListener: 'keydown',
+                                                elementFunction: (event) => addNote(event)
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        elementType: 'div',
+                                        id: 'addButton',
+                                        childs: [{
+                                            elementType: 'img',
+
+                                            classes: ["actionButton"],
+                                            attributes: {
+                                                src: './assets/img/icons/add.svg'
+                                            },
+                                            elementEvents: [
+                                                {
+                                                    elementListener: 'click',
+                                                    elementFunction: (event) => addNote(event)
+                                                }
+                                            ]
+                                        }]
                                     }
                                 ]
-                            },
-                            {
-                                elementType: 'div',
-                                id: 'saveButton',
-                                childs: [{
-                                    elementType: 'img',
-        
-                                    classes: ["actionButton"],
-                                    attributes: {
-                                        src: './assets/img/icons/save.svg'
-                                    },
-                                    elementEvents: [
-                                        {
-                                            elementListener: 'click',
-                                            elementFunction: (event) => editNote(event)
-                                        }
-                                    ]
-                                }]
                             }
                         ]
-                    }
-                ]
-            }
-        ]
-    },
-    /* MODAL EDIT */
-    /* MODAL DETAILS */
-    {
-        elementType: 'div',
-        id: 'modalDetails',
-        classes:['hideModal'],
-        childs: [
-            {
-                elementType: 'div',
-                id: 'divDetails'
-            }
-        ]
-    },
-    /* MODAL DETAILS */
+                    },
+                    /* FORM NEWTASK */
+
+                    /* FILTER */
+                    {
+                        elementType: 'div',
+                        id: 'divFilter',
+                        childs: [
+                            {
+                                elementType: 'label',
+                                attributes: {
+                                    textContent: 'Filter:'
+                                }
+                            },
+                            {
+                                elementType: 'select',
+                                id: 'selectFilter',
+                                elementEvents: [
+                                    {
+                                        elementListener: 'change',
+                                        elementFunction: (event) => filterNotes(event)
+                                    }
+                                ],
+                                childs: [
+                                    {
+                                        elementType: 'option',
+                                        attributes: {
+                                            value: 'all',
+                                            textContent: 'All'
+                                        }
+                                    },
+                                    {
+                                        elementType: 'option',
+                                        attributes: {
+                                            value: 'pending',
+                                            textContent: 'Pending'
+                                        }
+                                    },
+                                    {
+                                        elementType: 'option',
+                                        attributes: {
+                                            value: 'completed',
+                                            textContent: 'Completed'
+                                        }
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    /* FILTER */
+
+                    /* SHOW TASKS */
+                    {
+                        elementType: 'div',
+                        id: "rootNotes",
+                        childs: [
+                            {
+                                elementType: 'div',
+                                id: "outputNotes"
+                            },
+                        ]
+                    },
+                    /* SHOW TASKS */
+                    /* TASKS COUNTER */
+                    {
+                        elementType: 'hr'
+                    },
+                    {
+                        elementType: 'div',
+                        childs: [
+                            {
+                                elementType: 'p',
+                                id: 'tasksCounterLabel',
+                                attributes: {
+                                    textContent: `${countCompleted()}/${countTotal()} Task(s) completed`
+                                }
+                            }
+                        ]
+                    },
+                    /* TASKS COUNTER */
+                    /* MODAL EDIT */
+                    {
+                        elementType: 'div',
+                        id: 'modalEdit',
+                        classes: ['hideModal'],
+                        childs: [
+                            {
+                                elementType: 'div',
+                                childs: [
+                                    {
+                                        elementType:'div',
+                                        classes:['titleModal'],
+                                        childs:[
+                                            {
+                                                elementType:'h2',
+                                                classes:['titleModal'],
+                                                attributes:{
+                                                    textContent:'Edit'
+                                                }
+                                            },
+                                            {
+                                                elementType: 'div',
+                                                classes: ['closeButton'],
+                                                childs: [
+                                                    {
+                                                        elementType: 'img',
+                                                        classes: ["actionButton"],
+                                                        attributes: {
+                                                            src: './assets/img/icons/close.svg'
+                                                        },
+                                                        
+                                                        datasets: {
+                                                            modal: 'modalEdit'
+                                                        },
+                                                        elementEvents: [
+                                                            {
+                                                                elementListener: 'click',
+                                                                elementFunction: (event) => hideModal(event)
+                                                            }
+                                                        ],
+                                                    }
+                                                ]
+                                            },
+                                        ]
+                                    },
+                                    {
+                                        elementType: 'form',
+                                        childs: [
+                                            {
+                                                elementType: 'input',
+                                                id: 'inputEditNote',
+                                                classes: ['textField'],
+                                                attributes: {
+                                                    type: 'text',
+                                                    placeholder: 'Enter a new task name',
+                                                    value: ''
+                                                },
+                                                elementEvents: [
+                                                    {
+                                                        elementListener: 'keydown',
+                                                        elementFunction: (event) => editNote(event)
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                elementType: 'div',
+                                                id: 'saveButton',
+                                                childs: [{
+                                                    elementType: 'img',
+
+                                                    classes: ["actionButton"],
+                                                    attributes: {
+                                                        src: './assets/img/icons/save.svg'
+                                                    },
+                                                    elementEvents: [
+                                                        {
+                                                            elementListener: 'click',
+                                                            elementFunction: (event) => editNote(event)
+                                                        }
+                                                    ]
+                                                }]
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    /* MODAL EDIT */
+                    /* MODAL DETAILS */
+                    {
+                        elementType: 'div',
+                        id: 'modalDetails',
+                        classes: ['hideModal'],
+                        childs:[
+                            {
+                                elementType: 'div',
+                                id: 'divDetails'
+                            }
+                        ]
+                    },
+                    /* MODAL DETAILS */
                 ]
             }
         ]

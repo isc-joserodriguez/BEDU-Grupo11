@@ -1,4 +1,5 @@
 const createElement = (element, father) => {
+    if(!element)return;
     let tempElement = document.createElement(element.elementType);
     if (element.classes) tempElement.classList = element.classes.join(" ");
     if (element.id) tempElement.id = element.id;
@@ -156,11 +157,11 @@ const createDivTask = (task) => {
 };
 
 const deleteDivTask = (element) => {
-    element.parentNode.removeChild(element);
+    element.remove();
 };
 
 const editLabelTask = (text, id) => {
-    document.getElementById(`taskLabel${id}`).textContent = text;
+    document.getElementById(`taskLabel${id}`).textContent = text.length>20?`${text.substring(0,20)}...`:text;
 };
 
 const filterTasks = (filter) => {
@@ -194,28 +195,42 @@ const setDetailTasks = (id) => {
     let task = getTaskById(id);
     addChilds([
         {
-            elementType:'div',
-            id:'closeButton',
-                childs:[{
-                    elementType: 'img',
-                classes:["actionButton"],
-                attributes: {
-                    src:'./assets/img/icons/close.svg'
-                },
-            datasets: {
-                id: task.id,
-                modal: 'modalDetails'
-            },
-            elementEvents: [
+            elementType: 'div',
+            classes:['titleModal'],
+            childs:[
                 {
-                    elementListener: 'click',
-                    elementFunction: (event) => hideModal(event)
-                }
-            ],
-                }]
+                    elementType:'h2',
+                    classes:['titleModal'],
+                    attributes:{
+                        textContent:'Details'
+                    }
+                },
+                {
+                    elementType:'div',
+                    classes:['closeButton'],
+                        childs:[{
+                            elementType: 'img',
+                        classes:["actionButton"],
+                        attributes: {
+                            src:'./assets/img/icons/close.svg'
+                        },
+                    datasets: {
+                        id: task.id,
+                        modal: 'modalDetails'
+                    },
+                    elementEvents: [
+                        {
+                            elementListener: 'click',
+                            elementFunction: (event) => hideModal(event)
+                        }
+                    ],
+                        }]
+                },
+            ]
         },
         {
-            elementType: 'h1',
+            elementType: task.task.length<=20?'h3':'p',
+            classes:task.task.length<=20?['descriptionShort',]:['descriptionLarge'],
             attributes: {
                 textContent: task.task
             },
@@ -234,7 +249,7 @@ const setDetailTasks = (id) => {
                 }
             ]
         },
-        {
+        task.status?{
             elementType: 'p',
             attributes: {
                 textContent: 'Finished Date: '
@@ -247,7 +262,7 @@ const setDetailTasks = (id) => {
                     },
                 }
             ]
-        },
+        }: null,
         {
             elementType: 'p',
             attributes: {
@@ -256,6 +271,7 @@ const setDetailTasks = (id) => {
             childs: [
                 {
                     elementType: 'span',
+                    classes:task.status?['statusFinished']:['statusPending'],
                     attributes: {
                         textContent: (task.status) ? 'Finished' : 'Pending'
                     },
