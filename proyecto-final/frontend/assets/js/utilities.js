@@ -9,3 +9,8 @@ function consecutive() {
     JSON.parse(localStorage.getItem('tareas'))[JSON.parse(localStorage.getItem('tareas')).length - 1].id + 1 :
     1
 }
+
+const toggleModal=(id)=>{
+  let modal= document.getElementById(event.target.dataset.modal);
+  modal.classList=[...modal.classList][0]==='hideModal'?'showModal':'hideModal';
+}

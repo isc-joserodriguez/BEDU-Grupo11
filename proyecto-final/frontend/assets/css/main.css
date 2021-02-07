@@ -8,10 +8,11 @@
 }
 
 /* Colors */
+/* Gradients */
 /* Filters */
 footer {
   display: flex;
-  color: #00ff99;
+  color: #00ffd5;
   justify-content: space-between;
   align-items: center;
   background-color: #222222;
@@ -42,7 +43,7 @@ footer #developDiv {
   text-align: center;
 }
 footer #developDiv #developTitle {
-  color: #00ff99;
+  color: #00ffd5;
   margin-bottom: 6px;
 }
 footer #developDiv > span {
@@ -82,100 +83,173 @@ body {
   background-color: #edf0ee;
 }
 
-#root {
-  padding: 20px 200px;
+#container {
+  text-align: center;
+}
+
+.showModal {
+  display: flex;
+  background-color: #0000005b;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+.showModal #divDetails:not(#closeButton) {
   background-color: white;
-  width: 50%;
+  /* max-width: 80%;
+  padding: 10px 20px; */
+  margin: auto;
+  position: relative;
+  bottom: 35;
+}
+
+.hideModal {
+  display: none;
+}
+
+#root {
+  background-color: white;
+  width: 70%;
   height: 90%;
   padding: 1%;
   display: inline-block;
   justify-content: center;
   align-items: center;
   border-radius: 10px;
-  margin: 2%;
+  margin: 0 0 180px 0;
   font-family: "Montserrat", sans-serif;
 }
-
-#inputNote, #inputEditNote {
-  border: 1px solid #dbe1eb;
-  font-size: 10px;
-  font-family: "Montserrat", sans-serif;
-  height: 20px;
-  padding-left: 6px;
-  padding-right: 6px;
-  padding-top: 4px;
-  padding-bottom: 4px;
-  border-radius: 4px;
-  -moz-border-radius: 4px;
-  -webkit-border-radius: 4px;
-  -o-border-radius: 4px;
-  background: #ffffff;
-  background: linear-gradient(left, #ffffff, #f7f9fa);
-  background: -moz-linear-gradient(left, #ffffff, #f7f9fa);
-  background: -webkit-linear-gradient(left, #ffffff, #f7f9fa);
-  background: -o-linear-gradient(left, #ffffff, #f7f9fa);
-  color: #2e3133;
-  font-size: 13px;
+#root .actionButton {
+  filter: brightness(0) invert(1);
+  max-height: 80%;
 }
-#inputNote:focus, #inputEditNote:focus {
-  color: #222222;
-  border-color: #00ff99;
-}
-
-#newTaskInput {
+#root #newTaskForm {
   width: 100%;
   display: flex;
   justify-content: center;
   padding: 20px;
 }
-#newTaskInput > .textField {
+#root #inputNote,
+#root #inputEditNote {
+  border: 1px solid #dbe1eb;
+  font-family: "Montserrat", sans-serif;
+  height: 30px;
   width: 100%;
   padding: 20px;
+  /* -left: 6px;
+  padding-right: 6px;
+  padding-top: 4px;
+  padding-bottom: 4px; */
+  border-radius: 5px 0 0 5px;
+  background: white;
+  background: linear-gradient(left, white, #f7f9fa);
+  color: #222222;
+  font-size: 13px;
 }
-
-.singleTask {
+#root #inputNote:focus,
+#root #inputEditNote:focus {
+  outline: none;
+  color: #222222;
+  border-color: #00ff99;
+}
+#root #checkTask {
+  transform: scale(1.5);
+  margin-right: 5px;
+}
+#root #divFilter {
+  text-align: right;
+}
+#root .singleTask {
   display: flex;
-  height: 35px;
+  justify-content: space-between;
   align-items: center;
   margin: 5px 10px;
+  border: 1px solid #dbe1eb;
+  padding: 0px 7px;
+}
+#root .singleTask label {
+  padding-left: 5px;
+  padding-right: 5px;
+  font-size: 12px;
+}
+#root .singleTask .tachado {
+  text-decoration-line: line-through;
+  color: #dbe1eb;
+}
+#root .singleTask #buttonsTask {
+  display: flex;
 }
 
-.actionButton {
-  filter: brightness(0) invert(1);
-  max-height: 100%;
+#addButton,
+#saveButton,
+#editButton,
+#detailButton,
+#deleteButton,
+#closeButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  padding: 0 5px;
+  cursor: pointer;
+}
+
+#editButton,
+#detailButton,
+#deleteButton {
+  margin: 5px 3px;
+}
+
+#addButton {
+  background-color: #00ff99;
+  border-radius: 0px 5px 5px 0;
 }
 
 #saveButton {
-  display: inline-block;
-  border-radius: 2px;
-  border: 1px solid #dbe1eb;
-  padding: 3px;
+  background-color: #00ff99;
+  border-radius: 0px 5px 5px 0;
+}
+
+#editButton {
+  background-color: #00ffae;
   height: 30px;
   width: 30px;
-  align-self: center;
-  margin-left: 5px;
-  height: 40px;
-  background-color: #00ff99;
+}
+
+#detailButton {
+  background-color: #00ffd5;
+  height: 30px;
+  width: 30px;
+}
+
+#deleteButton {
+  background-color: #f0695a;
+  height: 30px;
+  width: 30px;
+}
+
+#closeButton {
+  background-color: #8139ed;
+  display: inline;
+  height: 30px;
+  width: 30px;
 }
 
 #tasksCounterLabel {
   margin: 20px 0 10px 0;
+  font-size: 14px;
+  display: flex;
+  justify-content: center;
+  color: #777777;
 }
 
 #selectFilter {
-  margin-left: 10px;
-}
-
-#filter {
-  text-align: right;
-}
-
-#modalEdit {
-  width: 100%;
-  display: flex;
-}
-#modalEdit > .textField {
-  padding: 20px;
+  margin: 0 10px;
+  font-family: "Montserrat", sans-serif;
+  border: 1px solid #dbe1eb;
+  height: 25px;
 }
 
 /*# sourceMappingURL=main.css.map */

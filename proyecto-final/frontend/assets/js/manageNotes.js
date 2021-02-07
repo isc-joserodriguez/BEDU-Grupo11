@@ -19,13 +19,16 @@ function deleteTask(id) {
 
 function toggleTask(id) {
     let tasks = getTasks();
+    let status = false;
     tasks.forEach((el, index) => {
         if (id == el.id) {
             tasks[index].status = !tasks[index].status;
-            tasks[index].finishedDate=createDate();
+            status = tasks[index].status;
+            tasks[index].finishedDate = createDate();
             saveTasks(tasks);
         }
     });
+    return status;
 }
 
 function getTaskById(id) {
@@ -49,15 +52,15 @@ function editTask(task, id) {
     });
 }
 
-function countCompleted(){
-    let tasks=getTasks();
-    let counter=0;
-    tasks.forEach(el=>{
-        if(el.status)counter++
+function countCompleted() {
+    let tasks = getTasks();
+    let counter = 0;
+    tasks.forEach(el => {
+        if (el.status) counter++
     });
     return counter;
 }
 
-function countTotal(){
+function countTotal() {
     return getTasks().length;
 }

@@ -1,9 +1,9 @@
 footer {
   display: flex;
-  color: $green;
+  color: $blueGreen;
   justify-content: space-between;
   align-items: center;
-  background-color: $blackGray;
+  background-color: $darkGray;
   padding: 25px;
   font-family: $cabin;
   position: fixed;
@@ -32,7 +32,7 @@ footer {
   #developDiv {
     text-align: center;
     #developTitle {
-      color: $green;
+      color: $blueGreen;
       margin-bottom: 6px;
     }
     & > span {
