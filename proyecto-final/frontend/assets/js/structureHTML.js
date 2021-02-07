@@ -1,4 +1,23 @@
 const structureHTML = [
+    /* HEADER */
+    {
+        elementType: 'header',
+        childs:[
+            {
+                elementType: 'img',
+                attributes:{
+                    src:'./assets/img/favicon.png'
+                }
+            },
+            {
+                elementType: 'h1',
+                attributes:{
+                    textContent:'To do app | Grupo 11'
+                }
+            }
+        ]
+    },
+    /* HEADER */
     /* FORM NEWTASK */
     {
         elementType: 'div',
