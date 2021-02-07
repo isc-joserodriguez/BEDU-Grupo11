@@ -22,9 +22,8 @@ function toggleTask(id) {
     tasks.forEach((el, index) => {
         if (id == el.id) {
             tasks[index].status = !tasks[index].status;
+            tasks[index].finishedDate=createDate();
             saveTasks(tasks);
-            console.log('[manageNotes] Esto no hace nada, hay que refactorizar');
-            return tasks[index].status;
         }
     });
 }
