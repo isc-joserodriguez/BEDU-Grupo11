@@ -45,11 +45,10 @@ function toggleNote(event) {
 }
 
 function openModal(event) {
-    console.log(event.target.dataset.modal)
     const id = event.target.dataset.id;
     const modalElement = document.getElementById(event.target.dataset.modal);
     /* styles modal */
-    /* modalElement.style.display='none'; */
+    modalElement.style.display = 'block';
     switch (event.target.dataset.modal) {
         case 'modalEdit':
             setEditTask(id);
@@ -58,6 +57,12 @@ function openModal(event) {
             setDetailTasks(id);
             break;
     }
+}
+
+function hideModal(event) {
+    const modalElement = document.getElementById(event.target.dataset.modal);
+    /* styles modal */
+    modalElement.style.display = 'none';
 }
 
 function editNote(event) {

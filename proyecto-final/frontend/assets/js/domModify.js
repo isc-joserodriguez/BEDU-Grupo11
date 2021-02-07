@@ -164,6 +164,22 @@ const setDetailTasks = (id) => {
     let task = getTaskById(id);
     addChilds([
         {
+            elementType:'button',
+            attributes:{
+                textContent:'Close'
+            },
+            datasets: {
+                id: task.id,
+                modal: 'modalDetails'
+            },
+            elementEvents: [
+                {
+                    elementListener: 'click',
+                    elementFunction: (event) => hideModal(event)
+                }
+            ],
+        },
+        {
             elementType: 'h1',
             attributes: {
                 textContent: task.task
