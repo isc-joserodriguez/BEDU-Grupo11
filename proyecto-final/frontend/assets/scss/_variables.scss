@@ -1,10 +1,17 @@
 /* Colors */
-$gradientGreen: linear-gradient(to left, #00ff99, #33ccff);
 $backgroundGrey: #edf0ee;
 $gray: #777777;
-$ligthGray: #dbe1eb;
-$blackGray: #222222;
+$lightGray: #dbe1eb;
+$darkGray: #222222;
 $green: #00ff99;
+$blue: #33ccff;
+$blueGreen: #00ffd5;
+$lightGreen: #00ffae;
+$red: rgb(240, 105, 90);
+
+/* Gradients */
+$gradientGreen: linear-gradient(to left, #00ff99, #33ccff);
+$gradientWhite: linear-gradient(left, white, #f7f9fa);
 
 /* Filters */
 $whiteFilter: brightness(0) invert(1);

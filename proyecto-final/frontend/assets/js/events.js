@@ -43,23 +43,20 @@ function removeNote(event) {
 }
 
 function toggleNote(event) {
-    toggleTask(event.target.dataset.id);
+    document.getElementById(`taskLabel${event.target.dataset.id}`).classList=toggleTask(event.target.dataset.id)?['tachado']:[''];
     document.getElementById('tasksCounterLabel').textContent=`${countCompleted()}/${countTotal()} Task(s) completed`;
 }
 
 function openModal(event) {
-    const id = event.target.dataset.id;
-    const modalElement = document.getElementById(event.target.dataset.modal);
-    /* styles modal */
-    modalElement.style.display = 'block';
     switch (event.target.dataset.modal) {
         case 'modalEdit':
-            setEditTask(id);
+            setEditTask(event.target.dataset.id);
             break;
         case 'modalDetails':
-            setDetailTasks(id);
+            setDetailTasks(event.target.dataset.id);
             break;
     }
+    toggleModal(event.target.dataset.modal);
 }
 
 function hideModal(event) {

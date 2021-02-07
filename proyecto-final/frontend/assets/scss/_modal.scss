@@ -1,0 +1,23 @@
+.showModal {
+  display: flex;
+  background-color: #0000005b;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  #divDetails:not(#closeButton) {
+    background-color: white;
+    /* max-width: 80%;
+    padding: 10px 20px; */
+    margin: auto;
+    position: relative;
+    bottom: 35;
+  }
+}
+
+
+
+.hideModal {
+  display: none;
+}

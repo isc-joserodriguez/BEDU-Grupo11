@@ -40,114 +40,118 @@ const addTaskToDiv = () => {
 };
 
 const createDivTask = (task) => {
-    /* {id: 1,
-        task: "dasda",
-        status: false,
-        creationDate: "5/2/2021 21:52:54",
-        finishedDate: null,
-        color: []
-    }*/
     return {
         elementType: 'div',
         id: task.id,
         classes:["singleTask"],
         childs: [
             {
-                elementType: 'input',
-                attributes: {
-                    type: 'checkbox',
-                    classes:["taskCheck"], 
-                    checked: task.status
-                },
-                datasets: {
-                    id: task.id
-                },
-                elementEvents: [
-                    {
-                        elementListener: 'change',
-                        elementFunction: (event) => toggleNote(event)
-                    }
-                ]
-            },  
-            {
-                elementType: 'label',
-                id: `taskLabel${task.id}`,
-                classes:task.status?['tachado']:[''],
-                attributes: {
-                    textContent: task.task
-                }
-            },
-            {
                 elementType:'div',
-                id:'editButton',
                 childs:[
                     {
-                        elementType: 'img',
-                        classes:["actionButton"],
-                            attributes: {
-                            src:'./assets/img/icons/edit.svg'
+                        elementType: 'input',
+                        id:'checkTask',
+                        attributes: {
+                            type: 'checkbox',
+                            classes:["taskCheck"], 
+                            checked: task.status
                         },
                         datasets: {
-                            id: task.id,
-                            modal: 'modalEdit'
+                            id: task.id
                         },
                         elementEvents: [
                             {
-                                elementListener: 'click',
-                                elementFunction: (event) => openModal(event)
+                                elementListener: 'change',
+                                elementFunction: (event) => toggleNote(event)
                             }
                         ]
+                    },  
+                    {
+                        elementType: 'label',
+                        id: `taskLabel${task.id}`,
+                        classes:task.status?['tachado']:[''],
+                        attributes: {
+                            textContent: task.task.length>20?`${task.task.substring(0,20)}...`:task.task
+                        }
                     },
                 ]
             },
             {
                 elementType:'div',
-                id:'detailButton',
+                id:'buttonsTask',
                 childs:[
                     {
-                        elementType: 'img',
+                        elementType:'div',
+                        id:'editButton',
+                        childs:[
+                            {
+                                elementType: 'img',
+                                classes:["actionButton"],
+                                    attributes: {
+                                    src:'./assets/img/icons/edit-2.svg'
+                                },
+                                datasets: {
+                                    id: task.id,
+                                    modal: 'modalEdit'
+                                },
+                                elementEvents: [
+                                    {
+                                        elementListener: 'click',
+                                        elementFunction: (event) => openModal(event)
+                                    }
+                                ]
+                            },
+                        ]
+                    },
+                    {
+                        elementType:'div',
                         id:'detailButton',
+                        childs:[
+                            {
+                                elementType: 'img',
+                                classes:["actionButton"],
+                                attributes: {
+                                    src:'./assets/img/icons/detail.svg'
+                                },
+                                datasets: {
+                                    id: task.id,
+                                    modal: 'modalDetails'
+                                },
+                                elementEvents: [
+                                    {
+                                        elementListener: 'click',
+                                        elementFunction: (event) => openModal(event)
+                                    }
+                                ]
+                            },
+                        ]
+                    },
+                    {
+                        elementType:'div',
+                        id:'deleteButton',
+                        childs:[
+                            {
+                                
+                        elementType: 'img',
                         classes:["actionButton"],
                         attributes: {
-                            src:'./assets/img/icons/detail.svg'
+                            src:'./assets/img/icons/delete.svg'
                         },
                         datasets: {
-                            id: task.id,
-                            modal: 'modalDetails'
+                            id: task.id
                         },
                         elementEvents: [
                             {
                                 elementListener: 'click',
-                                elementFunction: (event) => openModal(event)
+                                elementFunction: (event) => removeNote(event)
                             }
                         ]
-                    },
-                ]
-            },
-            {
-                elementType:'div',
-                id:'deleteButton',
-                childs:[
-                    {
-                        
-                elementType: 'img',
-                classes:["actionButton"],
-                attributes: {
-                    src:'./assets/img/icons/delete.svg'
-                },
-                datasets: {
-                    id: task.id
-                },
-                elementEvents: [
-                    {
-                        elementListener: 'click',
-                        elementFunction: (event) => removeNote(event)
-                    }
-                ]
+                            }
+                        ]
                     }
                 ]
             }
-        ]
+        ]//
     }
 };
 
@@ -191,10 +195,9 @@ const setDetailTasks = (id) => {
     addChilds([
         {
             elementType:'div',
-                id:'deleteButton',
+            id:'closeButton',
                 childs:[{
                     elementType: 'img',
-                id:'closeButton',
                 classes:["actionButton"],
                 attributes: {
                     src:'./assets/img/icons/close.svg'
