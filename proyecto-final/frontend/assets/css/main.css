@@ -246,6 +246,11 @@ body {
   border: 1px solid #dbe1eb;
   height: 25px;
 }
+#root #selectFilter:focus {
+  outline: none;
+  color: #222222;
+  border-color: #00ff99;
+}
 #root .singleTask {
   display: flex;
   justify-content: space-between;
