@@ -32,16 +32,19 @@ function addNote(event) {
         document.getElementById('inputNote').value = "";
         event.preventDefault();
     }
+    document.getElementById('tasksCounterLabel').textContent=`${countCompleted()}/${countTotal()} Task(s) completed`;
 }
 
 function removeNote(event) {
     const idRemove = event.target.dataset.id;
     deleteTask(idRemove);
     deleteDivTask(document.getElementById(idRemove));
+    document.getElementById('tasksCounterLabel').textContent=`${countCompleted()}/${countTotal()} Task(s) completed`;
 }
 
 function toggleNote(event) {
     toggleTask(event.target.dataset.id);
+    document.getElementById('tasksCounterLabel').textContent=`${countCompleted()}/${countTotal()} Task(s) completed`;
 }
 
 function openModal(event) {

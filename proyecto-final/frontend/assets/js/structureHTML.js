@@ -117,26 +117,26 @@ const structureHTML = [
                 elementType: 'div',
                 id: "outputNotes"
             },
-            /* TASKS COUNTER */
-            {
-                elementType: 'hr'
-            },
-            {
-                elementType: 'div',
-                childs: [
-                    {
-                        elementType: 'p',
-                        id: 'tasksCounterLabel',
-                        attributes: {
-                            textContent: '0/5 Task(s) completed'
-                        }
-                    }
-                ]
-            },
-            /* TASKS COUNTER */
         ]
     },
     /* SHOW TASKS */
+    /* TASKS COUNTER */
+    {
+        elementType: 'hr'
+    },
+    {
+        elementType: 'div',
+        childs: [
+            {
+                elementType: 'p',
+                id: 'tasksCounterLabel',
+                attributes: {
+                    textContent: `${countCompleted()}/${countTotal()} Task(s) completed`
+                }
+            }
+        ]
+    },
+    /* TASKS COUNTER */
     /* MODAL EDIT */
     {
         elementType: 'div',
