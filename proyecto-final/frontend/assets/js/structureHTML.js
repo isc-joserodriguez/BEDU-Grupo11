@@ -163,26 +163,39 @@ const structureHTML = [
                                 elementType: 'div',
                                 childs: [
                                     {
-                                        elementType: 'div',
-                                        classes: ['closeButton'],
-                                        childs: [
+                                        elementType:'div',
+                                        classes:['titleModal'],
+                                        childs:[
                                             {
-                                                elementType: 'img',
-                                                classes: ["actionButton"],
-                                                attributes: {
-                                                    src: './assets/img/icons/close.svg'
-                                                },
-                                                
-                                                datasets: {
-                                                    modal: 'modalEdit'
-                                                },
-                                                elementEvents: [
+                                                elementType:'h2',
+                                                classes:['titleModal'],
+                                                attributes:{
+                                                    textContent:'Edit'
+                                                }
+                                            },
+                                            {
+                                                elementType: 'div',
+                                                classes: ['closeButton'],
+                                                childs: [
                                                     {
-                                                        elementListener: 'click',
-                                                        elementFunction: (event) => hideModal(event)
+                                                        elementType: 'img',
+                                                        classes: ["actionButton"],
+                                                        attributes: {
+                                                            src: './assets/img/icons/close.svg'
+                                                        },
+                                                        
+                                                        datasets: {
+                                                            modal: 'modalEdit'
+                                                        },
+                                                        elementEvents: [
+                                                            {
+                                                                elementListener: 'click',
+                                                                elementFunction: (event) => hideModal(event)
+                                                            }
+                                                        ],
                                                     }
-                                                ],
-                                            }
+                                                ]
+                                            },
                                         ]
                                     },
                                     {
@@ -234,7 +247,7 @@ const structureHTML = [
                         elementType: 'div',
                         id: 'modalDetails',
                         classes: ['hideModal'],
-                        childs: [
+                        childs:[
                             {
                                 elementType: 'div',
                                 id: 'divDetails'

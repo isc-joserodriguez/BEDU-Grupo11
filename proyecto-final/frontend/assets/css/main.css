@@ -104,22 +104,39 @@ body {
   text-align: center;
   background-color: white;
   max-width: 80%;
-  padding: 10px 10px;
+  padding: 35px 35px;
+  border-radius: 10px;
   margin: auto;
   position: relative;
   bottom: 19%;
 }
 .showModal > div .descriptionShort {
-  margin-bottom: 15px;
+  margin: 15px 0;
   background-color: #39bded44;
 }
 .showModal > div .descriptionLarge {
-  margin-bottom: 15px;
+  margin: 15px 0;
   background-color: #39bded44;
+}
+.showModal > div .titleModal {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #8d12b3;
 }
 
 .hideModal {
   display: none;
+}
+
+.statusPending {
+  color: #33ccff;
+  font-weight: 700;
+}
+
+.statusFinished {
+  color: #00ff99;
+  font-weight: 700;
 }
 
 #root {
@@ -205,7 +222,7 @@ body {
 }
 #root .closeButton {
   background-color: #8139ed;
-  margin-left: auto;
+  margin-left: 0;
 }
 #root #editButton {
   background-color: #00ffae;
