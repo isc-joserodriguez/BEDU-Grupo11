@@ -156,11 +156,11 @@ const createDivTask = (task) => {
 };
 
 const deleteDivTask = (element) => {
-    element.parentNode.removeChild(element);
+    element.remove();
 };
 
 const editLabelTask = (text, id) => {
-    document.getElementById(`taskLabel${id}`).textContent = text;
+    document.getElementById(`taskLabel${id}`).textContent = text.length>20?`${text.substring(0,20)}...`:text;
 };
 
 const filterTasks = (filter) => {
@@ -195,7 +195,7 @@ const setDetailTasks = (id) => {
     addChilds([
         {
             elementType:'div',
-            id:'closeButton',
+            classes:['closeButton'],
                 childs:[{
                     elementType: 'img',
                 classes:["actionButton"],
@@ -215,7 +215,8 @@ const setDetailTasks = (id) => {
                 }]
         },
         {
-            elementType: 'h1',
+            elementType: task.task.length<=20?'h3':'p',
+            classes:task.task.length<=20?['descriptionShort',]:['descriptionLarge'],
             attributes: {
                 textContent: task.task
             },
