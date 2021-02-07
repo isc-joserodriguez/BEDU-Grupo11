@@ -50,11 +50,13 @@ const createDivTask = (task) => {
     return {
         elementType: 'div',
         id: task.id,
+        classes:["singleTask"],
         childs: [
             {
                 elementType: 'input',
                 attributes: {
                     type: 'checkbox',
+                    classes:["taskCheck"], 
                     checked: task.status
                 },
                 datasets: {
@@ -76,41 +78,62 @@ const createDivTask = (task) => {
                 }
             },
             {
-                elementType: 'button',
-                attributes: {
-                    textContent: 'Edit'
-                },
-                datasets: {
-                    id: task.id,
-                    modal: 'modalEdit'
-                },
-                elementEvents: [
+                elementType:'div',
+                id:'editButton',
+                childs:[
                     {
-                        elementListener: 'click',
-                        elementFunction: (event) => openModal(event)
-                    }
+                        elementType: 'img',
+                        classes:["actionButton"],
+                            attributes: {
+                            src:'./assets/img/icons/edit.svg'
+                        },
+                        datasets: {
+                            id: task.id,
+                            modal: 'modalEdit'
+                        },
+                        elementEvents: [
+                            {
+                                elementListener: 'click',
+                                elementFunction: (event) => openModal(event)
+                            }
+                        ]
+                    },
                 ]
             },
             {
-                elementType: 'button',
-                attributes: {
-                    textContent: 'Details'
-                },
-                datasets: {
-                    id: task.id,
-                    modal: 'modalDetails'
-                },
-                elementEvents: [
+                elementType:'div',
+                id:'detailButton',
+                childs:[
                     {
-                        elementListener: 'click',
-                        elementFunction: (event) => openModal(event)
-                    }
+                        elementType: 'img',
+                        id:'detailButton',
+                        classes:["actionButton"],
+                        attributes: {
+                            src:'./assets/img/icons/detail.svg'
+                        },
+                        datasets: {
+                            id: task.id,
+                            modal: 'modalDetails'
+                        },
+                        elementEvents: [
+                            {
+                                elementListener: 'click',
+                                elementFunction: (event) => openModal(event)
+                            }
+                        ]
+                    },
                 ]
             },
             {
-                elementType: 'button',
+                elementType:'div',
+                id:'deleteButton',
+                childs:[
+                    {
+                        
+                elementType: 'img',
+                classes:["actionButton"],
                 attributes: {
-                    textContent: 'Delete',
+                    src:'./assets/img/icons/delete.svg'
                 },
                 datasets: {
                     id: task.id
@@ -119,6 +142,8 @@ const createDivTask = (task) => {
                     {
                         elementListener: 'click',
                         elementFunction: (event) => removeNote(event)
+                    }
+                ]
                     }
                 ]
             }
@@ -165,10 +190,15 @@ const setDetailTasks = (id) => {
     let task = getTaskById(id);
     addChilds([
         {
-            elementType:'button',
-            attributes:{
-                textContent:'Close'
-            },
+            elementType:'div',
+                id:'deleteButton',
+                childs:[{
+                    elementType: 'img',
+                id:'closeButton',
+                classes:["actionButton"],
+                attributes: {
+                    src:'./assets/img/icons/close.svg'
+                },
             datasets: {
                 id: task.id,
                 modal: 'modalDetails'
@@ -179,6 +209,7 @@ const setDetailTasks = (id) => {
                     elementFunction: (event) => hideModal(event)
                 }
             ],
+                }]
         },
         {
             elementType: 'h1',

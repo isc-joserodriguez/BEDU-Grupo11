@@ -1,0 +1,49 @@
+footer {
+  display: flex;
+  color: $green;
+  justify-content: space-between;
+  align-items: center;
+  background-color: $blackGray;
+  padding: 25px;
+  font-family: $cabin;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+
+  & > div > p {
+    color: $gray;
+  }
+
+  a {
+    color: $gray;
+    text-decoration: none;
+    &:hover {
+      color: white;
+      text-decoration: none;
+    }
+  }
+
+  img {
+    filter: $whiteFilter;
+    max-height: 20px;
+    margin-right: 5px;
+  }
+  #developDiv {
+    text-align: center;
+    #developTitle {
+      color: $green;
+      margin-bottom: 6px;
+    }
+    & > span {
+      display: block;
+      a{
+          text-decoration:'none';
+      }
+    }
+  }
+
+  span {
+    margin: 0 5px;
+  }
+}

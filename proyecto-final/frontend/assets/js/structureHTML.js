@@ -2,11 +2,13 @@ const structureHTML = [
     /* HEADER */
     {
         elementType: 'header',
+        
         childs: [
             {
                 elementType: 'img',
                 attributes: {
-                    src: './assets/img/favicon.png'
+                    src: './assets/img/favicon.png',
+                    id: 'logo'
                 }
             },
             {
@@ -18,12 +20,17 @@ const structureHTML = [
         ]
     },
     /* HEADER */
-    /* FORM NEWTASK */
+    {
+        elementType: 'div',
+        id:'root',
+        childs:[
+            /* FORM NEWTASK */
     {
         elementType: 'div',
         childs: [
             {
                 elementType: 'form',
+                id: 'newTaskInput',
                 childs: [
                     {
                         elementType: 'input',
@@ -42,11 +49,14 @@ const structureHTML = [
                         ]
                     },
                     {
-                        elementType: 'input',
-                        classes: ['submitButton'],
+                        elementType:'div',
+                        id:'addButton',
+                childs:[{
+                    elementType: 'img',
+                        
+                        classes:["actionButton"],
                         attributes: {
-                            type: 'submit',
-                            value: 'Save'
+                            src:'./assets/img/icons/add.svg'
                         },
                         elementEvents: [
                             {
@@ -54,6 +64,7 @@ const structureHTML = [
                                 elementFunction: (event) => addNote(event)
                             }
                         ]
+                }]
                     }
                 ]
             }
@@ -64,6 +75,7 @@ const structureHTML = [
     /* FILTER */
     {
         elementType: 'div',
+        id:'filter',
         childs: [
             {
                 elementType: 'label',
@@ -126,7 +138,7 @@ const structureHTML = [
     },
     {
         elementType: 'div',
-        childs: [
+            childs: [
             {
                 elementType: 'p',
                 id: 'tasksCounterLabel',
@@ -137,6 +149,8 @@ const structureHTML = [
         ]
     },
     /* TASKS COUNTER */
+        ]
+    },
     /* MODAL EDIT */
     {
         elementType: 'div',
@@ -151,7 +165,7 @@ const structureHTML = [
                         classes: ['textField'],
                         attributes: {
                             type: 'text',
-                            placeholder: 'Enter new name task',
+                            placeholder: 'Enter a new task name',
                             value: ''
                         },
                         elementEvents: [
@@ -162,11 +176,14 @@ const structureHTML = [
                         ]
                     },
                     {
-                        elementType: 'input',
-                        classes: ['submitButton'],
+                        elementType:'div',
+                        id:'saveButton',
+                childs:[{
+                    elementType: 'img',
+                        
+                        classes:["actionButton"],
                         attributes: {
-                            type: 'submit',
-                            value: 'Edit'
+                            src:'./assets/img/icons/save.svg'
                         },
                         elementEvents: [
                             {
@@ -174,6 +191,7 @@ const structureHTML = [
                                 elementFunction: (event) => editNote(event)
                             }
                         ]
+                }]
                     }
                 ]
             }
@@ -203,10 +221,17 @@ const structureHTML = [
                         elementType:'span',
                         childs:[
                             {
+                                elementType:'img',
+                                attributes:{
+                                    src:'./assets/img/icons/github.svg'
+                                }
+                            },
+                            {
                                 elementType: 'a',
                                 attributes: {
                                     textContent: 'GitHub - Repository',
-                                    href: 'https://github.com/joanrodriguezhe/BEDU-Grupo11/tree/develop/proyecto-final/frontend'
+                                    href: 'https://github.com/joanrodriguezhe/BEDU-Grupo11/tree/develop/proyecto-final/frontend',
+                                    target:"_blank"
                                 },
                                 classes: ['footerLink']
                             },
@@ -222,10 +247,17 @@ const structureHTML = [
                         elementType:'span',
                         childs:[
                             {
+                                elementType:'img',
+                                attributes:{
+                                    src:'./assets/img/icons/trello.svg'
+                                }
+                            },
+                            {
                                 elementType: 'a',
                                 attributes: {
                                     textContent: 'Trello',
-                    href: 'https://trello.com/b/9SiK8HwQ/bedu'
+                                    href: 'https://trello.com/b/9SiK8HwQ/bedu',
+                                    target:"_blank"
                                 },
                                 classes: ['footerLink']
                             },
@@ -235,67 +267,89 @@ const structureHTML = [
             },
             {
                 elementType: 'div',
+                id:'developDiv',
                 childs: [
                     {
                         elementType:'p',
+                        id:'developTitle',
                         attributes: {
                             textContent:'Development Team:'
                         }
                     },
                     {
-                        elementType:'p',
-                        attributes: {
-                            textContent:'Adrian Barros '
-                        },
-                        childs:[{
-                            elementType:'a',
-                            attributes:{
-                                href:'https://github.com/Adrian-BT',
-                                textContent:'Adrian-BT'
+                        elementType:'span',
+                        childs:[
+                            {
+                                elementType:'a',
+                                attributes: {
+                                    href:'https://github.com/Adrian-BT',
+                                    textContent:'Adrian Barros ',
+                                    target:"_blank"
+                                }
+                            },
+                            {
+                                elementType:'img',
+                                attributes:{
+                                    src:'./assets/img/icons/external-link.svg'
+                                }
                             }
-                        }
                         ]
                     },
                     {
-                        elementType:'p',
-                        attributes: {
-                            textContent:'Elías Alejandro '
-                        },
-                        childs:[{
-                            elementType:'a',
-                            attributes:{
-                                href:'https://github.com/EAeliasalejandro',
-                                textContent:'EAeliasalejandro'
+                        elementType:'span',
+                        childs:[
+                            {
+                                elementType:'a',
+                                attributes: {
+                                    href:'https://github.com/EAeliasalejandro',
+                                    textContent:'Elías Alejandro ',
+                                    target:"_blank"
+                                }
+                            },
+                            {
+                                elementType:'img',
+                                attributes:{
+                                    src:'./assets/img/icons/external-link.svg'
+                                }
                             }
-                        }
                         ]
                     },
                     {
-                        elementType:'p',
-                        attributes: {
-                            textContent:'Nathaly N. Dimas C '
-                        },
-                        childs:[{
-                            elementType:'a',
-                            attributes:{
-                                href:'https://github.com/NathalyNDC',
-                                textContent:'NathalyNDC'
+                        elementType:'span',
+                        childs:[
+                            {
+                                elementType:'a',
+                                attributes: {
+                                    href:'https://github.com/NathalyNDC',
+                                    textContent:'Nathaly N. Dimas C. ',
+                                    target:"_blank"
+                                }
+                            },
+                            {
+                                elementType:'img',
+                                attributes:{
+                                    src:'./assets/img/icons/external-link.svg'
+                                }
                             }
-                        }
                         ]
                     },
                     {
-                        elementType:'p',
-                        attributes: {
-                            textContent:'José A. Rodriguez '
-                        },
-                        childs:[{
-                            elementType:'a',
-                            attributes:{
-                                href:'https://github.com/joanrodriguezhe',
-                                textContent:'joanrodriguezhe'
+                        elementType:'span',
+                        childs:[
+                            {
+                                elementType:'a',
+                                attributes: {
+                                    href:'https://github.com/joanrodriguezhe',
+                                    textContent:'José A. Rodriguez ',
+                                    target:"_blank"
+                                }
+                            },
+                            {
+                                elementType:'img',
+                                attributes:{
+                                    src:'./assets/img/icons/external-link.svg'
+                                }
                             }
-                        }
                         ]
                     }
                 ]

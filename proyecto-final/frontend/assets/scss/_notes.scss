@@ -1,0 +1,56 @@
+#newTaskInput {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+
+  & > .textField {
+    width: 100%;
+    padding: 20px;
+  }
+}
+.singleTask {
+  display: flex;
+  height: 35px;
+  align-items: center;
+  margin: 5px 10px;
+}
+
+.actionButton {
+  filter: $whiteFilter;
+  max-height: 100%;
+}
+
+#saveButton {
+  display: inline-block;
+  border-radius: 2px;
+  border: 1px solid #dbe1eb;
+  padding: 3px;
+  height: 30px;
+  width: 30px;
+  align-self: center;
+  margin-left: 5px;
+  height: 40px;
+  background-color: $green;
+}
+
+#tasksCounterLabel {
+  margin: 20px 0 10px 0;
+}
+
+#selectFilter {
+  margin-left: 10px;
+}
+
+#filter {
+  text-align: right;
+}
+
+#modalEdit {
+  width: 100%;
+  display: flex;
+
+  & > .textField {
+    padding: 20px;
+  }
+}

@@ -1,5 +1,181 @@
-h1 {
-  color: #b50a0a;
+@import url("https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poiret+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+/* Colors */
+/* Filters */
+footer {
+  display: flex;
+  color: #00ff99;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #222222;
+  padding: 25px;
+  font-family: "Cabin", sans-serif;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+}
+footer > div > p {
+  color: #777777;
+}
+footer a {
+  color: #777777;
+  text-decoration: none;
+}
+footer a:hover {
+  color: white;
+  text-decoration: none;
+}
+footer img {
+  filter: brightness(0) invert(1);
+  max-height: 20px;
+  margin-right: 5px;
+}
+footer #developDiv {
+  text-align: center;
+}
+footer #developDiv #developTitle {
+  color: #00ff99;
+  margin-bottom: 6px;
+}
+footer #developDiv > span {
+  display: block;
+}
+footer #developDiv > span a {
+  text-decoration: "none";
+}
+footer span {
+  margin: 0 5px;
+}
+
+header {
+  display: flex;
+  color: white;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 15px;
+  background: linear-gradient(to left, #00ff99, #33ccff);
+  padding: 10px;
+}
+header > * {
+  display: inline-block;
+  margin: auto 10px;
+}
+header #logo {
+  width: 60px;
+  height: 60px;
+  filter: brightness(0) invert(1);
+}
+header h1 {
+  font-family: "Cabin", sans-serif;
+  text-transform: uppercase;
+}
+
+body {
+  background-color: #edf0ee;
+}
+
+#root {
+  padding: 20px 200px;
+  background-color: white;
+  width: 50%;
+  height: 90%;
+  padding: 1%;
+  display: inline-block;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  margin: 2%;
+  font-family: "Montserrat", sans-serif;
+}
+
+#inputNote, #inputEditNote {
+  border: 1px solid #dbe1eb;
+  font-size: 10px;
+  font-family: "Montserrat", sans-serif;
+  height: 20px;
+  padding-left: 6px;
+  padding-right: 6px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  border-radius: 4px;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -o-border-radius: 4px;
+  background: #ffffff;
+  background: linear-gradient(left, #ffffff, #f7f9fa);
+  background: -moz-linear-gradient(left, #ffffff, #f7f9fa);
+  background: -webkit-linear-gradient(left, #ffffff, #f7f9fa);
+  background: -o-linear-gradient(left, #ffffff, #f7f9fa);
+  color: #2e3133;
+  font-size: 13px;
+}
+#inputNote:focus, #inputEditNote:focus {
+  color: #222222;
+  border-color: #00ff99;
+}
+
+#newTaskInput {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+#newTaskInput > .textField {
+  width: 100%;
+  padding: 20px;
+}
+
+.singleTask {
+  display: flex;
+  height: 35px;
+  align-items: center;
+  margin: 5px 10px;
+}
+
+.actionButton {
+  filter: brightness(0) invert(1);
+  max-height: 100%;
+}
+
+#saveButton {
+  display: inline-block;
+  border-radius: 2px;
+  border: 1px solid #dbe1eb;
+  padding: 3px;
+  height: 30px;
+  width: 30px;
+  align-self: center;
+  margin-left: 5px;
+  height: 40px;
+  background-color: #00ff99;
+}
+
+#tasksCounterLabel {
+  margin: 20px 0 10px 0;
+}
+
+#selectFilter {
+  margin-left: 10px;
+}
+
+#filter {
+  text-align: right;
+}
+
+#modalEdit {
+  width: 100%;
+  display: flex;
+}
+#modalEdit > .textField {
+  padding: 20px;
 }
 
 /*# sourceMappingURL=main.css.map */

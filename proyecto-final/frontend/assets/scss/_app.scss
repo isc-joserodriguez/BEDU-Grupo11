@@ -1,0 +1,25 @@
+body {
+  background-color: $backgroundGrey;
+}
+
+#root {
+  padding: 20px 200px;
+  background-color: white;
+  width: 50%;
+  height: 90%;
+  padding: 1%;
+  display: inline-block;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  margin: 2%;
+  font-family: $montserrat;
+}
+
+#inputNote, #inputEditNote {
+  @include txtStyle;
+  &:focus {
+    @include txtStyleFocus;
+  }
+}
+
