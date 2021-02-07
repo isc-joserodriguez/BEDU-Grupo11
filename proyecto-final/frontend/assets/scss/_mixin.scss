@@ -1,0 +1,25 @@
+@mixin txtStyle {
+    border: 1px solid #dbe1eb;
+    font-size: 10px;
+    font-family: $montserrat;
+    height: 20px;
+    padding-left: 6px;
+    padding-right: 6px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    border-radius: 4px;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -o-border-radius: 4px;
+    background: #ffffff;
+    background: linear-gradient(left, #ffffff, #f7f9fa);
+    background: -moz-linear-gradient(left, #ffffff, #f7f9fa);
+    background: -webkit-linear-gradient(left, #ffffff, #f7f9fa);
+    background: -o-linear-gradient(left, #ffffff, #f7f9fa);
+    color: #2e3133;
+    font-size: 13px;
+}
+@mixin txtStyleFocus{
+    color: $blackGray;
+    border-color: $green;
+}
