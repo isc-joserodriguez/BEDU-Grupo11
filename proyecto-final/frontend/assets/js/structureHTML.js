@@ -2,17 +2,17 @@ const structureHTML = [
     /* HEADER */
     {
         elementType: 'header',
-        childs:[
+        childs: [
             {
                 elementType: 'img',
-                attributes:{
-                    src:'./assets/img/favicon.png'
+                attributes: {
+                    src: './assets/img/favicon.png'
                 }
             },
             {
                 elementType: 'h1',
-                attributes:{
-                    textContent:'To do app | Grupo 11'
+                attributes: {
+                    textContent: 'To do app | Grupo 11'
                 }
             }
         ]
@@ -190,7 +190,123 @@ const structureHTML = [
                 id: 'divDetails'
             }
         ]
-    }
+    },
     /* MODAL DETAILS */
-
+    /* FOOTER */
+    {
+        elementType: 'footer',
+        childs: [
+            {
+                elementType:'p',
+                childs:[
+                    {
+                        elementType:'span',
+                        childs:[
+                            {
+                                elementType: 'a',
+                                attributes: {
+                                    textContent: 'GitHub - Repository',
+                                    href: 'https://github.com/joanrodriguezhe/BEDU-Grupo11/tree/develop/proyecto-final/frontend'
+                                },
+                                classes: ['footerLink']
+                            },
+                        ]
+                    },
+                    {
+                        elementType:'span',
+                        attributes: {
+                            textContent: ' | ',
+                        },
+                    },
+                    {
+                        elementType:'span',
+                        childs:[
+                            {
+                                elementType: 'a',
+                                attributes: {
+                                    textContent: 'Trello',
+                    href: 'https://trello.com/b/9SiK8HwQ/bedu'
+                                },
+                                classes: ['footerLink']
+                            },
+                        ]
+                    }
+                ]
+            },
+            {
+                elementType: 'div',
+                childs: [
+                    {
+                        elementType:'p',
+                        attributes: {
+                            textContent:'Development Team:'
+                        }
+                    },
+                    {
+                        elementType:'p',
+                        attributes: {
+                            textContent:'Adrian Barros '
+                        },
+                        childs:[{
+                            elementType:'a',
+                            attributes:{
+                                href:'https://github.com/Adrian-BT',
+                                textContent:'Adrian-BT'
+                            }
+                        }
+                        ]
+                    },
+                    {
+                        elementType:'p',
+                        attributes: {
+                            textContent:'Elías Alejandro '
+                        },
+                        childs:[{
+                            elementType:'a',
+                            attributes:{
+                                href:'https://github.com/EAeliasalejandro',
+                                textContent:'EAeliasalejandro'
+                            }
+                        }
+                        ]
+                    },
+                    {
+                        elementType:'p',
+                        attributes: {
+                            textContent:'Nathaly N. Dimas C '
+                        },
+                        childs:[{
+                            elementType:'a',
+                            attributes:{
+                                href:'https://github.com/NathalyNDC',
+                                textContent:'NathalyNDC'
+                            }
+                        }
+                        ]
+                    },
+                    {
+                        elementType:'p',
+                        attributes: {
+                            textContent:'José A. Rodriguez '
+                        },
+                        childs:[{
+                            elementType:'a',
+                            attributes:{
+                                href:'https://github.com/joanrodriguezhe',
+                                textContent:'joanrodriguezhe'
+                            }
+                        }
+                        ]
+                    }
+                ]
+            },//div
+            {
+                elementType:'p',
+                attributes:{
+                    textContent:'© Feb-2021 | All Rights Reserved'
+                }
+            }
+        ]
+    }
+    /* FOOTER */
 ];
