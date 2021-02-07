@@ -66,10 +66,11 @@ const createDivTask = (task) => {
                         elementFunction: (event) => toggleNote(event)
                     }
                 ]
-            },
+            },  
             {
                 elementType: 'label',
                 id: `taskLabel${task.id}`,
+                classes:task.status?['tachado']:[''],
                 attributes: {
                     textContent: task.task
                 }
