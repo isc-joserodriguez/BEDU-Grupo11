@@ -48,3 +48,16 @@ function editTask(task, id) {
         }
     });
 }
+
+function countCompleted(){
+    let tasks=getTasks();
+    let counter=0;
+    tasks.forEach(el=>{
+        if(el.status)counter++
+    });
+    return counter;
+}
+
+function countTotal(){
+    return getTasks().length;
+}
