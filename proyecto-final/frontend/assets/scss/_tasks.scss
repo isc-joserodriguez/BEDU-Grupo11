@@ -31,8 +31,8 @@
   }
 
   //call mixin text fields styles
-  #inputNote,
-  #inputEditNote {
+  #inputTask,
+  #inputEditTask {
     @include txtStyle;
     &:focus {
       outline: none;

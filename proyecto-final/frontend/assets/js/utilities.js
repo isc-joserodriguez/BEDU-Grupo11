@@ -24,6 +24,7 @@ const toggleModal = (id, action) =>{
     case 'hide':
       //assing class 'hide' to apply css styles in the selected modal
       document.getElementById(id).classList='hideModal';
+      document.getElementById('editTaskInputError').classList = 'hideError'; //Remove error message
       break;
   }  
 }

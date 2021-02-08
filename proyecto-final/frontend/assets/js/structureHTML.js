@@ -38,7 +38,7 @@ const structureHTML = [
                                 childs: [
                                     {
                                         elementType: 'input',
-                                        id: 'inputNote',
+                                        id: 'inputTask',
                                         classes: ['textField'],
                                         attributes: {
                                             type: 'text',
@@ -48,7 +48,7 @@ const structureHTML = [
                                         elementEvents: [
                                             {
                                                 elementListener: 'keydown',
-                                                elementFunction: (event) => addNote(event)
+                                                elementFunction: (event) => addTask(event)
                                             },
                                             {
                                                 elementListener: 'keyup',
@@ -68,7 +68,7 @@ const structureHTML = [
                                             elementEvents: [
                                                 {
                                                     elementListener: 'click',
-                                                    elementFunction: (event) => addNote(event)
+                                                    elementFunction: (event) => addTask(event)
                                                 }
                                             ]
                                         }]
@@ -104,7 +104,7 @@ const structureHTML = [
                                 elementEvents: [
                                     {
                                         elementListener: 'change',
-                                        elementFunction: (event) => filterNotes(event)
+                                        elementFunction: (event) => onFilterTasks(event)
                                     }
                                 ],
                                 childs: [
@@ -138,11 +138,11 @@ const structureHTML = [
                     /* SHOW TASKS */
                     {
                         elementType: 'div',
-                        id: "rootNotes",
+                        id: "rootTasks",
                         childs: [
                             {
                                 elementType: 'div',
-                                id: "outputNotes"
+                                id: "outputTasks"
                             },
                         ]
                     },
@@ -214,7 +214,7 @@ const structureHTML = [
                                         childs: [
                                             {
                                                 elementType: 'input',
-                                                id: 'inputEditNote',
+                                                id: 'inputEditTask',
                                                 classes: ['textField'],
                                                 attributes: {
                                                     type: 'text',
@@ -224,7 +224,7 @@ const structureHTML = [
                                                 elementEvents: [
                                                     {
                                                         elementListener: 'keydown',
-                                                        elementFunction: (event) => editNote(event)
+                                                        elementFunction: (event) => onEditTask(event)
                                                     },
                                                     {
                                                         elementListener: 'keyup',
@@ -245,7 +245,7 @@ const structureHTML = [
                                                     elementEvents: [
                                                         {
                                                             elementListener: 'click',
-                                                            elementFunction: (event) => editNote(event)
+                                                            elementFunction: (event) => onEditTask(event)
                                                         }
                                                     ]
                                                 }]
