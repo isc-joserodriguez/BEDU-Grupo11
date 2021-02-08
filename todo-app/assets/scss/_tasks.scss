@@ -22,6 +22,14 @@
     max-height: 80%;
   }
 
+  .hideNoTasks {
+    display: none;
+  }
+
+  .showNoTasks {
+    display: block;
+  }
+
   //new task form
   form {
     width: 100%;

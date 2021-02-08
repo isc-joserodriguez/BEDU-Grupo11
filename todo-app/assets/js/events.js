@@ -55,6 +55,8 @@ const removeTask = (event) => {
     const idRemove = event.target.dataset.id;
     deleteTask(idRemove);
     deleteDivTask(document.getElementById(idRemove));
+    document.getElementById('noTasks').classList = 
+    [...document.getElementById('outputTasks').children].length > 0 ? ['hideNoTasks'] : ['showNoTasks'];
     document.getElementById('tasksCounterLabel').textContent = `${countCompleted()}/${countTotal()} Task(s) completed`;
 }
 

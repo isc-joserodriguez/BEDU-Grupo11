@@ -30,21 +30,14 @@ const addChilds = (arrayChilds, father) => {
     });
 };
 
-//Receive the element and the array of classes to be added
-const addClasses = (element, classes) => {
-    element.classList = [... new Set([...element.classList].concat(classes))].join(' ');
-};
-
-//Receive an element and a className
-const removeClass = (element, removedClass) => {
-    element.classList = [...element.classList].filter(elementClass => elementClass !== removedClass).join(' ');
-};
-
 const addTaskToDiv = () => {
-    return [...getTasks()].map(task => createDivTask(task)); //call the div creator for each task
+    let tasks = [...getTasks()].map(task => createDivTask(task));
+    document.getElementById('noTasks').classList = tasks.length > 0 ? ['hideNoTasks'] : ['showNoTasks'];
+    return tasks;//call the div creator for each task
 };
 
 const createDivTask = (task) => {
+    document.getElementById('noTasks').classList = ['hideNoTasks'];
     return {
         elementType: 'div',
         id: task.id,
@@ -184,16 +177,9 @@ const filterTasks = (filter) => {
             break;
         default: addChilds(addTaskToDiv(), document.getElementById('outputTasks'))
     }
-    addChilds(
-        filteredTasks.length>0 ? filteredTasks : [{
-            elementType: 'h2',
-            attributes: {
-                textContent: 'Nothing to show here!',
-                style: 'color:red;'
-            }
-        }],
-        document.getElementById('outputTasks')
-    );
+    
+    document.getElementById('noTasks').classList = filteredTasks.length > 0 ? ['hideNoTasks'] : ['showNoTasks'];
+    addChilds(filteredTasks, document.getElementById('outputTasks'));
 };
 
 //save the data of task id to be modified in Edition

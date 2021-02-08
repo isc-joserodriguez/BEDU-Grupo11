@@ -134,6 +134,15 @@ const structureHTML = [
                         ]
                     },
                     /* END - FILTER */
+                    {
+                        elementType: 'h2',
+                        id: 'noTasks',
+                        classes: ['hideNoTasks'],
+                        attributes: {
+                            textContent: 'Nothing to show here!',
+                            style: 'color:red;'
+                        }
+                    },
 
                     /* SHOW TASKS */
                     {

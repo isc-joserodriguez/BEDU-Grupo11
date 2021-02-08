@@ -179,6 +179,12 @@ body {
   filter: brightness(0) invert(1);
   max-height: 80%;
 }
+#root .hideNoTasks {
+  display: none;
+}
+#root .showNoTasks {
+  display: block;
+}
 #root form {
   width: 100%;
   display: flex;
