@@ -260,13 +260,16 @@ body {
   justify-content: center;
   color: #777777;
 }
-#root #newTaskInputError, #root #editTaskInputError {
+#root #newTaskInputError,
+#root #editTaskInputError {
   color: red;
 }
-#root #newTaskInputError.hideError, #root #editTaskInputError.hideError {
+#root #newTaskInputError.hideError,
+#root #editTaskInputError.hideError {
   display: none;
 }
-#root #newTaskInputError.showError, #root #editTaskInputError.showError {
+#root #newTaskInputError.showError,
+#root #editTaskInputError.showError {
   display: block;
 }
 #root #selectFilter {
