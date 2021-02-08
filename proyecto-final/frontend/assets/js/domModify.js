@@ -67,7 +67,7 @@ const createDivTask = (task) => {
                         elementEvents: [
                             {
                                 elementListener: 'change',
-                                elementFunction: (event) => toggleNote(event)
+                                elementFunction: (event) => onToggleTask(event)
                             }
                         ]
                     },
@@ -148,7 +148,7 @@ const createDivTask = (task) => {
                                 elementEvents: [
                                     {
                                         elementListener: 'click',
-                                        elementFunction: (event) => removeNote(event)
+                                        elementFunction: (event) => removeTask(event)
                                     }
                                 ]
                             }
@@ -172,8 +172,8 @@ const editLabelTask = (text, id) => {
 
 //Sort by pending or completed
 const filterTasks = (filter) => {
-    document.getElementById('outputNotes').remove();
-    createElement({ elementType: 'div', id: 'outputNotes' }, document.getElementById('rootNotes'));
+    document.getElementById('outputTasks').remove();
+    createElement({ elementType: 'div', id: 'outputTasks' }, document.getElementById('rootTasks'));
     let filteredTasks = getTasks();
     switch (filter) {
         case 'pending':
@@ -182,14 +182,14 @@ const filterTasks = (filter) => {
         case 'completed':
             filteredTasks = filteredTasks.filter(el => (el.status == true)).map(el => createDivTask(el));
             break;
-        default: addChilds(addTaskToDiv(), document.getElementById('outputNotes'))
+        default: addChilds(addTaskToDiv(), document.getElementById('outputTasks'))
     }
-    addChilds(filteredTasks, document.getElementById('outputNotes'))
+    addChilds(filteredTasks, document.getElementById('outputTasks'))
 };
 
 //save the data of task id to be modified in Edition
 const setEditTask = (id) => {
-    let inputEdit = document.getElementById('inputEditNote');
+    let inputEdit = document.getElementById('inputEditTask');
     inputEdit.value = getTaskById(id).task;
     inputEdit.dataset.id = id;
 };
