@@ -1,0 +1,11 @@
+{
+  "name": "todo-app",
+  "version": "1.0.0",
+  "description": "TODO App with VanillaJS",
+  "main": "index.js",
+  "scripts": {
+    "watch": "sass --watch ./assets/scss:./assets/css"
+  },
+  "author": "Adrian Barros, Nathaly Dimas, Jose Rodriguez, Elias Ramirez",
+  "license": "ISC"
+}

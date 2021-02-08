@@ -1,0 +1,55 @@
+footer {
+  display: flex;
+  color: $blueGreen;
+  justify-content: space-between;
+  align-items: center;
+  background-color: $darkGray;
+  padding: 25px;
+  font-family: $cabin;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  @media (max-width: 703px) {
+    flex-direction: column;
+    & > * {
+      margin-top: 10px;
+    }
+  }
+
+  //Links styles
+  a {
+    color: $gray;
+    text-decoration: none;
+    &:hover {
+      color: white;
+      text-decoration: none;
+    }
+  }
+
+  //Icons styles
+  img {
+    filter: $whiteFilter;
+    max-height: 20px;
+    margin-right: 5px;
+  }
+
+  //Middle part styles
+  #developDiv {
+    text-align: center;
+    #developTitle {
+      color: $blueGreen;
+      margin-bottom: 6px;
+    }
+    & > span {
+      display: block;
+      a {
+        text-decoration: "none";
+      }
+    }
+  }
+
+  span {
+    margin: 0 5px;
+  }
+}

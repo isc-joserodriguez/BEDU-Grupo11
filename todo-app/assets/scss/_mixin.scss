@@ -1,0 +1,19 @@
+//Text fields style
+@mixin txtStyle {
+    border: 1px solid $lightGray;
+    font-family: $montserrat;
+    height: 30px;
+    width: 100%;
+    padding: 20px;
+    border-radius: 5px 0 0 5px;
+    background: white;
+    background: $gradientWhite;
+    color: $darkGray;
+    font-size: 13px;
+}
+
+//Focused fields styles
+@mixin txtStyleFocus {
+    color: $darkGray;
+    border-color: $green;
+}

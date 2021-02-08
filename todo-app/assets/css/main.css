@@ -1,0 +1,320 @@
+@import url("https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poiret+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+/* Colors */
+/* Gradients */
+/* Filters */
+footer {
+  display: flex;
+  color: #00ffd5;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #222222;
+  padding: 25px;
+  font-family: "Cabin", sans-serif;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+}
+@media (max-width: 703px) {
+  footer {
+    flex-direction: column;
+  }
+  footer > * {
+    margin-top: 10px;
+  }
+}
+footer a {
+  color: #777777;
+  text-decoration: none;
+}
+footer a:hover {
+  color: white;
+  text-decoration: none;
+}
+footer img {
+  filter: brightness(0) invert(1);
+  max-height: 20px;
+  margin-right: 5px;
+}
+footer #developDiv {
+  text-align: center;
+}
+footer #developDiv #developTitle {
+  color: #00ffd5;
+  margin-bottom: 6px;
+}
+footer #developDiv > span {
+  display: block;
+}
+footer #developDiv > span a {
+  text-decoration: "none";
+}
+footer span {
+  margin: 0 5px;
+}
+
+header {
+  display: flex;
+  color: white;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 15px;
+  background: linear-gradient(to left, #00ff99, #33ccff);
+  padding: 10px;
+}
+header > * {
+  display: inline-block;
+  margin: auto 10px;
+}
+header #logo {
+  width: 60px;
+  height: 60px;
+  filter: brightness(0) invert(1);
+}
+header h1 {
+  font-family: "Cabin", sans-serif;
+  text-transform: uppercase;
+}
+
+@media (max-width: 703px) {
+  header h1 {
+    font-size: 25px;
+  }
+  header #logo {
+    width: 50px;
+    height: 50px;
+  }
+}
+body {
+  background-color: #edf0ee;
+}
+
+#app {
+  position: relative;
+}
+
+#container {
+  text-align: center;
+}
+
+.showModal {
+  display: flex;
+  overflow: hidden;
+  background-color: #0000005b;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 100vh;
+  z-index: 10;
+  transform: translateY(0px);
+  transition: all 0.3s ease-out;
+}
+.showModal > div {
+  background-color: white;
+  max-width: 80%;
+  padding: 35px 35px;
+  border-radius: 10px;
+  margin: auto;
+  position: relative;
+  bottom: 19%;
+}
+.showModal > div .descriptionLarge,
+.showModal > div .descriptionShort {
+  margin: 15px 0;
+  background-color: #39bded44;
+}
+.showModal > div .titleModal {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #8139ed;
+}
+.showModal > div .statusPending {
+  color: #33ccff;
+  font-weight: 700;
+}
+.showModal > div .statusFinished {
+  color: #00ff99;
+  font-weight: 700;
+}
+.showModal > div .textCreationDate,
+.showModal > div .textFinishedDate {
+  font-weight: bold;
+}
+
+.hideModal {
+  transform: translateY(-300vh);
+  height: 0;
+}
+
+#root {
+  background-color: white;
+  width: 70%;
+  height: 90%;
+  padding: 1%;
+  display: inline-block;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  margin: 0 0 180px 0;
+  font-family: "Montserrat", sans-serif;
+}
+@media (max-width: 703px) {
+  #root {
+    margin: 0 0 260px 0;
+    width: 85%;
+  }
+}
+#root .actionButton {
+  filter: brightness(0) invert(1);
+  max-height: 80%;
+}
+#root form {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 20px 20px 5px 20px;
+}
+#root #inputTask,
+#root #inputEditTask {
+  border: 1px solid #dbe1eb;
+  font-family: "Montserrat", sans-serif;
+  height: 30px;
+  width: 100%;
+  padding: 20px;
+  border-radius: 5px 0 0 5px;
+  background: white;
+  background: linear-gradient(left, white, #f7f9fa);
+  color: #222222;
+  font-size: 13px;
+}
+#root #inputTask:focus,
+#root #inputEditTask:focus {
+  outline: none;
+  color: #222222;
+  border-color: #00ff99;
+}
+#root #checkTask {
+  transform: scale(1.5);
+  margin-right: 5px;
+}
+#root #divFilter {
+  text-align: right;
+}
+#root #addButton,
+#root #saveButton,
+#root #editButton,
+#root #detailButton,
+#root #deleteButton,
+#root .closeButton {
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  padding: 0 5px;
+  cursor: pointer;
+}
+#root #addButton {
+  background-color: #00ff99;
+  border-radius: 0px 5px 5px 0;
+}
+#root #saveButton {
+  background-color: #00ff99;
+  border-radius: 0px 5px 5px 0;
+}
+#root #editButton,
+#root #detailButton,
+#root #deleteButton,
+#root .closeButton {
+  margin: 5px 3px;
+  height: 30px;
+  width: 30px;
+}
+#root .closeButton {
+  background-color: #8139ed;
+  margin-left: 0;
+}
+#root #editButton {
+  background-color: #00ffae;
+}
+#root #detailButton {
+  background-color: #00ffd5;
+}
+#root #deleteButton {
+  background-color: #f0695a;
+}
+#root #tasksCounterLabel {
+  margin: 20px 0 10px 0;
+  font-size: 14px;
+  display: flex;
+  justify-content: center;
+  color: #777777;
+}
+#root #newTaskInputError,
+#root #editTaskInputError {
+  color: red;
+}
+#root #newTaskInputError.hideError,
+#root #editTaskInputError.hideError {
+  display: none;
+}
+#root #newTaskInputError.showError,
+#root #editTaskInputError.showError {
+  display: block;
+}
+#root #selectFilter {
+  margin: 0 10px;
+  font-family: "Montserrat", sans-serif;
+  border: 1px solid #dbe1eb;
+  height: 25px;
+  margin-top: 15px;
+}
+#root #selectFilter:focus {
+  outline: none;
+  color: #222222;
+  border-color: #00ff99;
+}
+@media (max-width: 703px) {
+  #root #selectFilter {
+    height: 30px;
+    font-size: 13px;
+  }
+  #root #selectFilter:focus {
+    outline: none;
+    font-size: 13px;
+    color: #222222;
+    border-color: #00ff99;
+  }
+}
+#root .singleTask {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 5px 10px;
+  border: 1px solid #dbe1eb;
+  padding: 0px 7px;
+}
+#root .singleTask label {
+  padding-left: 5px;
+  padding-right: 5px;
+  font-size: 12px;
+}
+#root .singleTask .checked {
+  text-decoration-line: line-through;
+  color: #dbe1eb;
+}
+#root .singleTask #buttonsTask {
+  display: flex;
+}
+
+/*# sourceMappingURL=main.css.map */
