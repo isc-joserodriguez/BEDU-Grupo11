@@ -245,7 +245,7 @@ const setDetailTasks = (id) => {
         },
         {
             elementType: 'p',
-            classes:['textCreationDate'],
+            classes: ['textCreationDate'],
             attributes: {
                 textContent: 'Creation Date: '
             },
@@ -260,7 +260,7 @@ const setDetailTasks = (id) => {
         },
         task.status ? {
             elementType: 'p',
-            classes:['textFinishedDate'],
+            classes: ['textFinishedDate'],
             attributes: {
                 textContent: 'Finished Date: '
             },

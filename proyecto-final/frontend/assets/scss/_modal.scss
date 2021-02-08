@@ -1,13 +1,16 @@
 //Visible modal styles - container
 .showModal {
   display: flex;
+  overflow: hidden;
   background-color: $transparentBlack;
   position: absolute;
   top: 0;
   right: 0;
   bottom: 0;
   left: 0;
-  transform: translateY(0);
+  height: 100vh;
+  z-index: 10;
+  transform: translateY(0px);
   transition: all 0.3s ease-out;
   & > div {
     //Visible modal styles - content
@@ -24,11 +27,6 @@
       margin: 15px 0;
       background-color: $blueMark;
     }
-
-    /*      {
-      margin: 15px 0;
-      background-color: $blueMark;
-    } */
 
     .titleModal {
       display: flex;
@@ -55,5 +53,5 @@
 //Invisible modal styles - container
 .hideModal {
   transform: translateY(-300vh);
-  height:0;
+  height: 0;
 }

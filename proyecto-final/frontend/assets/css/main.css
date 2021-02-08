@@ -107,13 +107,16 @@ body {
 
 .showModal {
   display: flex;
+  overflow: hidden;
   background-color: #0000005b;
   position: absolute;
   top: 0;
   right: 0;
   bottom: 0;
   left: 0;
-  transform: translateY(0);
+  height: 100vh;
+  z-index: 10;
+  transform: translateY(0px);
   transition: all 0.3s ease-out;
 }
 .showModal > div {
@@ -124,10 +127,6 @@ body {
   margin: auto;
   position: relative;
   bottom: 19%;
-  /*      {
-    margin: 15px 0;
-    background-color: $blueMark;
-  } */
 }
 .showModal > div .descriptionLarge,
 .showModal > div .descriptionShort {

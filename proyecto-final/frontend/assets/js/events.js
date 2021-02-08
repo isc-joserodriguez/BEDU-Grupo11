@@ -17,7 +17,7 @@ const addTask = (event) => {
 
             event.target.value = ""; //clean the input field content
             event.preventDefault();
-        }else{
+        } else {
             document.getElementById('newTaskInputError').classList = 'showError';//Remove error message
         }
         event.preventDefault();
@@ -35,7 +35,7 @@ const addTask = (event) => {
             createNewTask(newTask);
             createElement(createDivTask(newTask), document.getElementById('outputTasks'));
             document.getElementById('newTaskInputError').classList = 'hideError';//Remove error message
-        }else{
+        } else {
             document.getElementById('newTaskInputError').classList = 'showError';//Remove error message
         }
         document.getElementById('inputTask').value = ""; //clean the input field content
@@ -43,7 +43,7 @@ const addTask = (event) => {
     }
     //completed/created - label of counters updated
     document.getElementById('tasksCounterLabel').textContent = `${countCompleted()}/${countTotal()} Task(s) completed`;//update the number of completed tasks label
-    
+
 }
 const validateNewTask = (event) => {
     if (event.key != 'Enter') {

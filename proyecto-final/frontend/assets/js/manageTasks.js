@@ -1,25 +1,25 @@
 //LocalStorage functions to manage Tasks info
 
-const getTasks=() =>{
+const getTasks = () => {
     return (JSON.parse(localStorage.getItem('tareas'))) ? JSON.parse(localStorage.getItem('tareas')) : [] //if we don't have tasks, we return an empty array
 }
 
-const saveTasks=(tasks) =>{
+const saveTasks = (tasks) => {
     localStorage.setItem('tareas', JSON.stringify(tasks));
 }
 
-const createNewTask=(task) =>{
+const createNewTask = (task) => {
     let tasks = getTasks()
     tasks.push(task)
     saveTasks(tasks)
 }
 
-const deleteTask=(id) =>{
+const deleteTask = (id) => {
     let tasks = getTasks();
     saveTasks(tasks.filter(el => id != el.id)); //save everything except the specified task
 }
 
-const toggleTask=(id) =>{
+const toggleTask = (id) => {
     let tasks = getTasks();
     let status = false;
     tasks.forEach((el, index) => {
@@ -33,7 +33,7 @@ const toggleTask=(id) =>{
     return status; //return true/false = checked/unchecked
 }
 
-const getTaskById=(id) =>{
+const getTaskById = (id) => {
     let tasks = getTasks();
     element = null;
     tasks.forEach(el => {
@@ -44,7 +44,7 @@ const getTaskById=(id) =>{
     return element;
 }
 
-const editTask=(task, id) =>{
+const editTask = (task, id) => {
     let tasks = getTasks();
     tasks.forEach((el, index) => {
         if (id == el.id) {
@@ -55,7 +55,7 @@ const editTask=(task, id) =>{
 }
 
 //obtein the tasks checked/complited
-const countCompleted=() =>{
+const countCompleted = () => {
     let tasks = getTasks();
     let counter = 0;
     tasks.forEach(el => {
@@ -64,6 +64,6 @@ const countCompleted=() =>{
     return counter;
 }
 
-const countTotal=() =>{
+const countTotal = () => {
     return getTasks().length;
 }
