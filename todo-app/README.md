@@ -210,7 +210,7 @@ npm run watch
 
 <a name="autores"></a>
 
-### Authores
+### Autores
 - ##### [Adrian-BT](https://github.com/Adrian-BT)
 - ##### [NathalyNDC](https://github.com/NathalyNDC)
 - ##### [EAeliasalejandro](https://github.com/EAeliasalejandro)
