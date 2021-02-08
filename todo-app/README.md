@@ -24,7 +24,10 @@ La aplicación a desarrollar será un “To do App” que cumpla con los siguien
 
 Se puede tomar como referencia el siguiente mockup
 <p align="center">
-  ![Mockup](https://raw.githubusercontent.com/joanrodriguezhe/BEDU-Grupo11/develop/docs/mockup.png)
+
+  
+![Mockup](https://raw.githubusercontent.com/joanrodriguezhe/BEDU-Grupo11/develop/docs/mockup.png)
+  
 </p>
 
 Todos los elementos visibles deben ser creados usando funciones de JavaScript, es decir, no se deben agregar o modificar etiquetas HTML. Iniciar con el siguiente código HTML:
@@ -49,7 +52,8 @@ Todos los elementos visibles deben ser creados usando funciones de JavaScript, e
 Los estilos son libres pero se sugiere no invertir demasiado tiempo en la parte visual y enfocarse más en la funcionalidad. Tomar en cuenta la experiencia del usuario, por ejemplo, limpiar el input después de agregar una tarea:
 
 <p align="center">
-  ![Ejemplo](https://raw.githubusercontent.com/joanrodriguezhe/BEDU-Grupo11/develop/docs/example-app.gif)
+  
+![Ejemplo](https://raw.githubusercontent.com/joanrodriguezhe/BEDU-Grupo11/develop/docs/example-app.gif)
 </p>
 
 Adicional al desarrollo de la aplicación se debe incluir un video de máximo 5 minutos donde se explique el código y el proceso que siguieron para desarrollar la aplicación. Incluir ejemplos de problemas que tuvieron y cómo los solucionaron. 
@@ -84,52 +88,60 @@ Recuerda ​que todos los elementos visibles deben ser creados usando funciones 
 Se utilizó un chat de Slack para organizar reuniones para trabajar en el proyecto.
 
 <p align="center">
-  ![Slack](https://raw.githubusercontent.com/joanrodriguezhe/BEDU-Grupo11/develop/docs/slack.jpg)
+  
+![Slack](https://raw.githubusercontent.com/joanrodriguezhe/BEDU-Grupo11/develop/docs/slack.jpg)
 </p>
 
 #### Meet
 Para las reuniones se optó por utilizar Meet de google.
 
 <p align="center">
-  ![Meet](https://raw.githubusercontent.com/joanrodriguezhe/BEDU-Grupo11/develop/docs/meet.jpg)
+  
+![Meet](https://raw.githubusercontent.com/joanrodriguezhe/BEDU-Grupo11/develop/docs/meet.jpg)
 </p>
 
 #### GitHub
 Para una mayor organización con el versionado del código, se utilizó un [repositorio de GitHub](https://github.com/joanrodriguezhe/BEDU-Grupo11).
 
 <p align="center">
-  ![GitHub](https://raw.githubusercontent.com/joanrodriguezhe/BEDU-Grupo11/develop/docs/github.gif)
+  
+![GitHub](https://raw.githubusercontent.com/joanrodriguezhe/BEDU-Grupo11/develop/docs/github.gif)
 </p>
 
 Haciendo los respectivos commits.
 
 <p align="center">
-  ![Commits](https://raw.githubusercontent.com/joanrodriguezhe/BEDU-Grupo11/develop/docs/commits.gif)
+  
+![Commits](https://raw.githubusercontent.com/joanrodriguezhe/BEDU-Grupo11/develop/docs/commits.gif)
 </p>
 
 Haciendo uso de ramas 
 
 <p align="center">
-  ![Branches](https://raw.githubusercontent.com/joanrodriguezhe/BEDU-Grupo11/develop/docs/branches.gif)
+  
+![Branches](https://raw.githubusercontent.com/joanrodriguezhe/BEDU-Grupo11/develop/docs/branches.gif)
 </p>
 
 Pull Requests.
 
 <p align="center">
-  ![PR](https://raw.githubusercontent.com/joanrodriguezhe/BEDU-Grupo11/develop/docs/pr.gif)
+  
+![PR](https://raw.githubusercontent.com/joanrodriguezhe/BEDU-Grupo11/develop/docs/pr.gif)
 </p>
 
 Estadisticas del repositorio:
 
 <p align="center">
-  ![insights](https://raw.githubusercontent.com/joanrodriguezhe/BEDU-Grupo11/develop/docs/insights.png)
+  
+![insights](https://raw.githubusercontent.com/joanrodriguezhe/BEDU-Grupo11/develop/docs/insights.png)
 </p>
 
 #### Trello
 Para el seguimiento de tareas, se utilizó [Trello](https://trello.com/b/9SiK8HwQ/bedu) como gestor de tareas.
 
 <p align="center">
-  ![Trello](https://raw.githubusercontent.com/joanrodriguezhe/BEDU-Grupo11/develop/docs/trello.jpg)
+  
+![Trello](https://raw.githubusercontent.com/joanrodriguezhe/BEDU-Grupo11/develop/docs/trello.jpg)
 </p>
 
 <a name="funcionalidad"></a>
@@ -139,43 +151,50 @@ Para el seguimiento de tareas, se utilizó [Trello](https://trello.com/b/9SiK8Hw
 #### Agregar nuevas tareas a la lista.
 
 <p align="center">
-  ![New Task](https://raw.githubusercontent.com/joanrodriguezhe/BEDU-Grupo11/develop/docs/newTask.gif)
+  
+![New Task](https://raw.githubusercontent.com/joanrodriguezhe/BEDU-Grupo11/develop/docs/newTask.gif)
 </p>
 
 #### Marcar una tarea como completada o incompleta.
 
 <p align="center">
-  ![Check Task](https://raw.githubusercontent.com/joanrodriguezhe/BEDU-Grupo11/develop/docs/checkTask.gif)
+  
+![Check Task](https://raw.githubusercontent.com/joanrodriguezhe/BEDU-Grupo11/develop/docs/checkTask.gif)
 </p>
 
 #### Eliminar una tarea que no necesite.
 
 <p align="center">
-  ![Delete Task](https://raw.githubusercontent.com/joanrodriguezhe/BEDU-Grupo11/develop/docs/deleteTask.gif)
+  
+![Delete Task](https://raw.githubusercontent.com/joanrodriguezhe/BEDU-Grupo11/develop/docs/deleteTask.gif)
 </p>
 
 #### Editar una tarea.
 
 <p align="center">
-  ![Edit Task](https://raw.githubusercontent.com/joanrodriguezhe/BEDU-Grupo11/develop/docs/editTask.gif)
+  
+![Edit Task](https://raw.githubusercontent.com/joanrodriguezhe/BEDU-Grupo11/develop/docs/editTask.gif)
 </p>
 
 #### Mostrar detalles de una tarea.
 
 <p align="center">
-  ![Details Task](https://raw.githubusercontent.com/joanrodriguezhe/BEDU-Grupo11/develop/docs/detailsTask.gif)
+  
+![Details Task](https://raw.githubusercontent.com/joanrodriguezhe/BEDU-Grupo11/develop/docs/detailsTask.gif)
 </p>
 
 #### Filtrar tareas.
 
 <p align="center">
-  ![Filter Task](https://raw.githubusercontent.com/joanrodriguezhe/BEDU-Grupo11/develop/docs/filterTask.gif)
+  
+![Filter Task](https://raw.githubusercontent.com/joanrodriguezhe/BEDU-Grupo11/develop/docs/filterTask.gif)
 </p>
 
 #### Validación de input.
 
 <p align="center">
-  ![Validate Task](https://raw.githubusercontent.com/joanrodriguezhe/BEDU-Grupo11/develop/docs/validateTask.gif)
+  
+![Validate Task](https://raw.githubusercontent.com/joanrodriguezhe/BEDU-Grupo11/develop/docs/validateTask.gif)
 </p>
 
 
