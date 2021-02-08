@@ -184,7 +184,16 @@ const filterTasks = (filter) => {
             break;
         default: addChilds(addTaskToDiv(), document.getElementById('outputTasks'))
     }
-    addChilds(filteredTasks, document.getElementById('outputTasks'))
+    addChilds(
+        filteredTasks.length>0 ? filteredTasks : [{
+            elementType: 'h2',
+            attributes: {
+                textContent: 'Nothing to show here!',
+                style: 'color:red;'
+            }
+        }],
+        document.getElementById('outputTasks')
+    );
 };
 
 //save the data of task id to be modified in Edition

@@ -1,14 +1,14 @@
-# restaurant-management
+# BEDU | Grupo 11
 ----
-## Installation
-Use npm to install dependencies.
+## Contenido
+- [Postwork Fase 02 Sesión 04](./postwork-F02S04)
+- [Proyecto Final - TODO App](./todo-app)
 
-```
-npm install
-```
+## Autores
+- ##### [Adrian-BT](https://github.com/Adrian-BT)
+- ##### [NathalyNDC](https://github.com/NathalyNDC)
+- ##### [EAeliasalejandro](https://github.com/EAeliasalejandro)
+- ##### [joanrodriguezhe](https://github.com/joanrodriguezhe)
 
-## Authors
-* ##### [Adrian-BT](https://github.com/Adrian-BT)
-* ##### [NathalyNDC](https://github.com/NathalyNDC)
-* ##### [EAeliasalejandro](https://github.com/EAeliasalejandro)
-* ##### [joanrodriguezhe](https://github.com/joanrodriguezhe)
+### [Ir a Repositorio](https://github.com/joanrodriguezhe/BEDU-Grupo11)
+### [Ir a tablero de Trello](https://trello.com/b/9SiK8HwQ/bedu)
