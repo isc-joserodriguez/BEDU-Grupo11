@@ -10,11 +10,14 @@ footer {
   left: 0;
   bottom: 0;
   width: 100%;
-
-  & > div > p {
-    color: $gray;
+  @media (max-width: 703px) {
+    flex-direction: column;
+    &>*{
+      margin-top:10px;
+    }
   }
 
+  //Links styles
   a {
     color: $gray;
     text-decoration: none;
@@ -24,11 +27,14 @@ footer {
     }
   }
 
+  //Icons styles
   img {
     filter: $whiteFilter;
     max-height: 20px;
     margin-right: 5px;
   }
+
+  //Middle part styles
   #developDiv {
     text-align: center;
     #developTitle {
@@ -37,8 +43,8 @@ footer {
     }
     & > span {
       display: block;
-      a{
-          text-decoration:'none';
+      a {
+        text-decoration: "none";
       }
     }
   }

@@ -2,7 +2,6 @@ const structureHTML = [
     /* HEADER */
     {
         elementType: 'header',
-
         childs: [
             {
                 elementType: 'img',
@@ -19,7 +18,8 @@ const structureHTML = [
             }
         ]
     },
-    /* HEADER */
+    /* END - HEADER */
+
     {
         elementType: 'div',
         id: 'container',
@@ -28,7 +28,7 @@ const structureHTML = [
                 elementType: 'div',
                 id: 'root',
                 childs: [
-                    /* FORM NEWTASK */
+                    /* NEWTASK FORM */
                     {
                         elementType: 'div',
                         childs: [
@@ -49,7 +49,11 @@ const structureHTML = [
                                             {
                                                 elementListener: 'keydown',
                                                 elementFunction: (event) => addNote(event)
-                                            }
+                                            },
+                                            {
+                                                elementListener: 'keyup',
+                                                elementFunction: (event) => validateNewTask(event)
+                                            },
                                         ]
                                     },
                                     {
@@ -57,7 +61,6 @@ const structureHTML = [
                                         id: 'addButton',
                                         childs: [{
                                             elementType: 'img',
-
                                             classes: ["actionButton"],
                                             attributes: {
                                                 src: './assets/img/icons/add.svg'
@@ -71,10 +74,18 @@ const structureHTML = [
                                         }]
                                     }
                                 ]
+                            },
+                            {
+                                elementType:'p',
+                                id:'newTaskInputError',
+                                classes:['hideError'],
+                                attributes:{
+                                    textContent:'Error: Add a valid value.'
+                                }
                             }
                         ]
                     },
-                    /* FORM NEWTASK */
+                    /* END - NEWTASK FORM */
 
                     /* FILTER */
                     {
@@ -122,7 +133,7 @@ const structureHTML = [
                             }
                         ]
                     },
-                    /* FILTER */
+                    /* END - FILTER */
 
                     /* SHOW TASKS */
                     {
@@ -135,7 +146,8 @@ const structureHTML = [
                             },
                         ]
                     },
-                    /* SHOW TASKS */
+                    /* END - SHOW TASKS */
+
                     /* TASKS COUNTER */
                     {
                         elementType: 'hr'
@@ -152,7 +164,8 @@ const structureHTML = [
                             }
                         ]
                     },
-                    /* TASKS COUNTER */
+                    /* END - TASKS COUNTER */
+
                     /* MODAL EDIT */
                     {
                         elementType: 'div',
@@ -168,7 +181,6 @@ const structureHTML = [
                                         childs:[
                                             {
                                                 elementType:'h2',
-                                                classes:['titleModal'],
                                                 attributes:{
                                                     textContent:'Edit'
                                                 }
@@ -183,7 +195,6 @@ const structureHTML = [
                                                         attributes: {
                                                             src: './assets/img/icons/close.svg'
                                                         },
-                                                        
                                                         datasets: {
                                                             modal: 'modalEdit'
                                                         },
@@ -214,7 +225,11 @@ const structureHTML = [
                                                     {
                                                         elementListener: 'keydown',
                                                         elementFunction: (event) => editNote(event)
-                                                    }
+                                                    },
+                                                    {
+                                                        elementListener: 'keyup',
+                                                        elementFunction: (event) => validateEditTask(event)
+                                                    },
                                                 ]
                                             },
                                             {
@@ -236,12 +251,30 @@ const structureHTML = [
                                                 }]
                                             }
                                         ]
+                                    },
+                                    {
+                                        elementType:'p',
+                                        id:'editTaskInputError',
+                                        classes:['hideError'],
+                                        attributes:{
+                                            textContent:'Error: Add a valid value.'
+                                        }
                                     }
                                 ]
                             }
-                        ]
+                        ],
+                        datasets: {
+                            modal: 'modalEdit'
+                        },
+                        elementEvents: [
+                            {
+                                elementListener: 'click',
+                                elementFunction: (event) => hideModal(event)
+                            }
+                        ],
                     },
-                    /* MODAL EDIT */
+                    /* END - MODAL EDIT */
+
                     /* MODAL DETAILS */
                     {
                         elementType: 'div',
@@ -252,13 +285,23 @@ const structureHTML = [
                                 elementType: 'div',
                                 id: 'divDetails'
                             }
-                        ]
+                        ],
+                        datasets: {
+                            modal: 'modalDetails'
+                        },
+                        elementEvents: [
+                            {
+                                elementListener: 'click',
+                                elementFunction: (event) => hideModal(event)
+                            }
+                        ],
                     },
-                    /* MODAL DETAILS */
+                    /* END - MODAL DETAILS */
                 ]
             }
         ]
     },
+    
     /* FOOTER */
     {
         elementType: 'footer',
@@ -314,6 +357,7 @@ const structureHTML = [
                     }
                 ]
             },
+            // DIV DEVELOPMENT TEAM INFO
             {
                 elementType: 'div',
                 id: 'developDiv',
@@ -402,7 +446,8 @@ const structureHTML = [
                         ]
                     }
                 ]
-            },//div
+            },
+            // END - DIV DEVELOPMENT TEAM INFO
             {
                 elementType: 'p',
                 attributes: {
@@ -411,5 +456,5 @@ const structureHTML = [
             }
         ]
     }
-    /* FOOTER */
+    /* END - FOOTER */
 ];

@@ -1,13 +1,16 @@
+//Visible modal styles - container
 .showModal {
   display: flex;
-  background-color: #0000005b;
+  background-color: $transparentBlack;
   position: absolute;
   top: 0;
   right: 0;
   bottom: 0;
   left: 0;
+  transform: translateY(0);
+  transition: all 0.3s ease-out;
   & > div {
-    text-align: center;
+    //Visible modal styles - content
     background-color: white;
     max-width: 80%;
     padding: 35px 35px;
@@ -16,35 +19,41 @@
     position: relative;
     bottom: 19%;
 
+    .descriptionLarge,
     .descriptionShort {
       margin: 15px 0;
       background-color: $blueMark;
     }
 
-    .descriptionLarge {
+    /*      {
       margin: 15px 0;
       background-color: $blueMark;
-    }
+    } */
 
     .titleModal {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      border-bottom: 1px solid #8d12b3;
+      border-bottom: 1px solid $purple;
+    }
+    .statusPending {
+      color: $blue;
+      font-weight: 700;
+    }
+
+    .statusFinished {
+      color: $green;
+      font-weight: 700;
+    }
+    .textCreationDate,
+    .textFinishedDate {
+      font-weight: bold;
     }
   }
 }
 
+//Invisible modal styles - container
 .hideModal {
-  display: none;
-}
-
-.statusPending {
-  color: $blue;
-  font-weight: 700;
-}
-
-.statusFinished {
-  color: $green;
-  font-weight:700;
+  transform: translateY(-300vh);
+  height:0;
 }

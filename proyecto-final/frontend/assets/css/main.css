@@ -23,8 +23,13 @@ footer {
   bottom: 0;
   width: 100%;
 }
-footer > div > p {
-  color: #777777;
+@media (max-width: 703px) {
+  footer {
+    flex-direction: column;
+  }
+  footer > * {
+    margin-top: 10px;
+  }
 }
 footer a {
   color: #777777;
@@ -79,16 +84,25 @@ header h1 {
   text-transform: uppercase;
 }
 
+@media (max-width: 703px) {
+  header h1 {
+    font-size: 25px;
+  }
+  header #logo {
+    width: 50px;
+    height: 50px;
+  }
+}
 body {
   background-color: #edf0ee;
 }
 
-#container {
-  text-align: center;
-}
-
 #app {
   position: relative;
+}
+
+#container {
+  text-align: center;
 }
 
 .showModal {
@@ -99,9 +113,10 @@ body {
   right: 0;
   bottom: 0;
   left: 0;
+  transform: translateY(0);
+  transition: all 0.3s ease-out;
 }
 .showModal > div {
-  text-align: center;
   background-color: white;
   max-width: 80%;
   padding: 35px 35px;
@@ -109,12 +124,13 @@ body {
   margin: auto;
   position: relative;
   bottom: 19%;
+  /*      {
+    margin: 15px 0;
+    background-color: $blueMark;
+  } */
 }
+.showModal > div .descriptionLarge,
 .showModal > div .descriptionShort {
-  margin: 15px 0;
-  background-color: #39bded44;
-}
-.showModal > div .descriptionLarge {
   margin: 15px 0;
   background-color: #39bded44;
 }
@@ -122,21 +138,24 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-bottom: 1px solid #8d12b3;
+  border-bottom: 1px solid #8139ed;
 }
-
-.hideModal {
-  display: none;
-}
-
-.statusPending {
+.showModal > div .statusPending {
   color: #33ccff;
   font-weight: 700;
 }
-
-.statusFinished {
+.showModal > div .statusFinished {
   color: #00ff99;
   font-weight: 700;
+}
+.showModal > div .textCreationDate,
+.showModal > div .textFinishedDate {
+  font-weight: bold;
+}
+
+.hideModal {
+  transform: translateY(-300vh);
+  height: 0;
 }
 
 #root {
@@ -151,6 +170,12 @@ body {
   margin: 0 0 180px 0;
   font-family: "Montserrat", sans-serif;
 }
+@media (max-width: 703px) {
+  #root {
+    margin: 0 0 260px 0;
+    width: 85%;
+  }
+}
 #root .actionButton {
   filter: brightness(0) invert(1);
   max-height: 80%;
@@ -159,7 +184,7 @@ body {
   width: 100%;
   display: flex;
   justify-content: center;
-  padding: 20px;
+  padding: 20px 20px 5px 20px;
 }
 #root #inputNote,
 #root #inputEditNote {
@@ -168,10 +193,6 @@ body {
   height: 30px;
   width: 100%;
   padding: 20px;
-  /* -left: 6px;
-  padding-right: 6px;
-  padding-top: 4px;
-  padding-bottom: 4px; */
   border-radius: 5px 0 0 5px;
   background: white;
   background: linear-gradient(left, white, #f7f9fa);
@@ -240,16 +261,38 @@ body {
   justify-content: center;
   color: #777777;
 }
+#root #newTaskInputError, #root #editTaskInputError {
+  color: red;
+}
+#root #newTaskInputError.hideError, #root #editTaskInputError.hideError {
+  display: none;
+}
+#root #newTaskInputError.showError, #root #editTaskInputError.showError {
+  display: block;
+}
 #root #selectFilter {
   margin: 0 10px;
   font-family: "Montserrat", sans-serif;
   border: 1px solid #dbe1eb;
   height: 25px;
+  margin-top: 15px;
 }
 #root #selectFilter:focus {
   outline: none;
   color: #222222;
   border-color: #00ff99;
+}
+@media (max-width: 703px) {
+  #root #selectFilter {
+    height: 30px;
+    font-size: 13px;
+  }
+  #root #selectFilter:focus {
+    outline: none;
+    font-size: 13px;
+    color: #222222;
+    border-color: #00ff99;
+  }
 }
 #root .singleTask {
   display: flex;
@@ -264,7 +307,7 @@ body {
   padding-right: 5px;
   font-size: 12px;
 }
-#root .singleTask .tachado {
+#root .singleTask .checked {
   text-decoration-line: line-through;
   color: #dbe1eb;
 }
