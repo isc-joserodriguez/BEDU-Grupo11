@@ -113,13 +113,14 @@
   }
 
   //Show and hide error newTaskInput
-  #newTaskInputError, #editTaskInputError{
-    color:red;
-    &.hideError{
-      display:none;
+  #newTaskInputError,
+  #editTaskInputError {
+    color: red;
+    &.hideError {
+      display: none;
     }
-    &.showError{
-      display:block;
+    &.showError {
+      display: block;
     }
   }
 
@@ -129,7 +130,7 @@
     font-family: $montserrat;
     border: 1px solid $lightGray;
     height: 25px;
-    margin-top:15px;
+    margin-top: 15px;
 
     &:focus {
       outline: none;
@@ -148,7 +149,6 @@
         @include txtStyleFocus;
       }
     }
-    
   }
 
   //Task styles

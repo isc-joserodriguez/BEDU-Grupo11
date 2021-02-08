@@ -12,8 +12,8 @@ footer {
   width: 100%;
   @media (max-width: 703px) {
     flex-direction: column;
-    &>*{
-      margin-top:10px;
+    & > * {
+      margin-top: 10px;
     }
   }
 

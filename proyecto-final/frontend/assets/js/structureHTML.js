@@ -76,11 +76,11 @@ const structureHTML = [
                                 ]
                             },
                             {
-                                elementType:'p',
-                                id:'newTaskInputError',
-                                classes:['hideError'],
-                                attributes:{
-                                    textContent:'Error: Add a valid value.'
+                                elementType: 'p',
+                                id: 'newTaskInputError',
+                                classes: ['hideError'],
+                                attributes: {
+                                    textContent: 'Error: Add a valid value.'
                                 }
                             }
                         ]
@@ -176,13 +176,13 @@ const structureHTML = [
                                 elementType: 'div',
                                 childs: [
                                     {
-                                        elementType:'div',
-                                        classes:['titleModal'],
-                                        childs:[
+                                        elementType: 'div',
+                                        classes: ['titleModal'],
+                                        childs: [
                                             {
-                                                elementType:'h2',
-                                                attributes:{
-                                                    textContent:'Edit'
+                                                elementType: 'h2',
+                                                attributes: {
+                                                    textContent: 'Edit'
                                                 }
                                             },
                                             {
@@ -253,11 +253,11 @@ const structureHTML = [
                                         ]
                                     },
                                     {
-                                        elementType:'p',
-                                        id:'editTaskInputError',
-                                        classes:['hideError'],
-                                        attributes:{
-                                            textContent:'Error: Add a valid value.'
+                                        elementType: 'p',
+                                        id: 'editTaskInputError',
+                                        classes: ['hideError'],
+                                        attributes: {
+                                            textContent: 'Error: Add a valid value.'
                                         }
                                     }
                                 ]
@@ -280,7 +280,7 @@ const structureHTML = [
                         elementType: 'div',
                         id: 'modalDetails',
                         classes: ['hideModal'],
-                        childs:[
+                        childs: [
                             {
                                 elementType: 'div',
                                 id: 'divDetails'
@@ -301,7 +301,7 @@ const structureHTML = [
             }
         ]
     },
-    
+
     /* FOOTER */
     {
         elementType: 'footer',
