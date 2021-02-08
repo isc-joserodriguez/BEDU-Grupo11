@@ -1,3 +1,4 @@
+//Tasks container
 #root {
   background-color: white;
   width: 70%;
@@ -10,18 +11,26 @@
   margin: 0 0 180px 0;
   font-family: $montserrat;
 
+  @media (max-width: 703px) {
+    margin: 0 0 260px 0;
+    width: 85%;
+  }
+
+  //buttons'icons styles
   .actionButton {
     filter: $whiteFilter;
     max-height: 80%;
   }
 
+  //new task form
   form {
     width: 100%;
     display: flex;
     justify-content: center;
-    padding: 20px;
+    padding: 20px 20px 5px 20px;
   }
 
+  //call mixin text fields styles
   #inputNote,
   #inputEditNote {
     @include txtStyle;
@@ -30,15 +39,19 @@
       @include txtStyleFocus;
     }
   }
+
+  //ckeckbox styles
   #checkTask {
     transform: scale(1.5);
     margin-right: 5px;
   }
 
+  //Filter's element container
   #divFilter {
     text-align: right;
   }
 
+  //Action buttons' general styles
   #addButton,
   #saveButton,
   #editButton,
@@ -53,16 +66,19 @@
     cursor: pointer;
   }
 
+  //Add new task button
   #addButton {
     background-color: $green;
     border-radius: 0px 5px 5px 0;
   }
 
+  //Save button style
   #saveButton {
     background-color: $green;
     border-radius: 0px 5px 5px 0;
   }
 
+  //Action buttons styles
   #editButton,
   #detailButton,
   #deleteButton,
@@ -87,6 +103,7 @@
     background-color: $red;
   }
 
+  //Task counter'label style
   #tasksCounterLabel {
     margin: 20px 0 10px 0;
     font-size: 14px;
@@ -95,11 +112,24 @@
     color: $gray;
   }
 
+  //Show and hide error newTaskInput
+  #newTaskInputError, #editTaskInputError{
+    color:red;
+    &.hideError{
+      display:none;
+    }
+    &.showError{
+      display:block;
+    }
+  }
+
+  //Select field styles
   #selectFilter {
     margin: 0 10px;
     font-family: $montserrat;
     border: 1px solid $lightGray;
     height: 25px;
+    margin-top:15px;
 
     &:focus {
       outline: none;
@@ -107,6 +137,21 @@
     }
   }
 
+  //selector font small for mobile
+  @media (max-width: 703px) {
+    #selectFilter {
+      height: 30px;
+      font-size: 13px;
+      &:focus {
+        outline: none;
+        font-size: 13px;
+        @include txtStyleFocus;
+      }
+    }
+    
+  }
+
+  //Task styles
   .singleTask {
     display: flex;
     justify-content: space-between;
@@ -121,7 +166,7 @@
       font-size: 12px;
     }
 
-    .tachado {
+    .checked {
       text-decoration-line: line-through;
       color: $lightGray;
     }

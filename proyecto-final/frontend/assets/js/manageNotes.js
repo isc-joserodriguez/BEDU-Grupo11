@@ -1,37 +1,39 @@
-function getTasks() {
-    return (JSON.parse(localStorage.getItem('tareas'))) ? JSON.parse(localStorage.getItem('tareas')) : []
+//LocalStorage functions to manage Tasks info
+
+const getTasks=() =>{
+    return (JSON.parse(localStorage.getItem('tareas'))) ? JSON.parse(localStorage.getItem('tareas')) : [] //if we don't have tasks, we return an empty array
 }
 
-function saveTasks(tasks) {
+const saveTasks=(tasks) =>{
     localStorage.setItem('tareas', JSON.stringify(tasks));
 }
 
-function createNewTask(task) {
+const createNewTask=(task) =>{
     let tasks = getTasks()
     tasks.push(task)
     saveTasks(tasks)
 }
 
-function deleteTask(id) {
+const deleteTask=(id) =>{
     let tasks = getTasks();
-    saveTasks(tasks.filter(el => id != el.id));
+    saveTasks(tasks.filter(el => id != el.id)); //save everything except the specified task
 }
 
-function toggleTask(id) {
+const toggleTask=(id) =>{
     let tasks = getTasks();
     let status = false;
     tasks.forEach((el, index) => {
         if (id == el.id) {
-            tasks[index].status = !tasks[index].status;
-            status = tasks[index].status;
-            tasks[index].finishedDate = createDate();
-            saveTasks(tasks);
+            tasks[index].status = !tasks[index].status; //assign opposite status
+            status = tasks[index].status; //save new status to be returned
+            tasks[index].finishedDate = createDate(); //assign finished date
+            saveTasks(tasks);//save info in localStorage
         }
     });
-    return status;
+    return status; //return true/false = checked/unchecked
 }
 
-function getTaskById(id) {
+const getTaskById=(id) =>{
     let tasks = getTasks();
     element = null;
     tasks.forEach(el => {
@@ -42,7 +44,7 @@ function getTaskById(id) {
     return element;
 }
 
-function editTask(task, id) {
+const editTask=(task, id) =>{
     let tasks = getTasks();
     tasks.forEach((el, index) => {
         if (id == el.id) {
@@ -52,15 +54,16 @@ function editTask(task, id) {
     });
 }
 
-function countCompleted() {
+//obtein the tasks checked/complited
+const countCompleted=() =>{
     let tasks = getTasks();
     let counter = 0;
     tasks.forEach(el => {
-        if (el.status) counter++
+        if (el.status) counter++ //checked=true increments the counter
     });
     return counter;
 }
 
-function countTotal() {
+const countTotal=() =>{
     return getTasks().length;
 }
