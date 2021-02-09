@@ -331,7 +331,7 @@ const structureHTML = [
                                 elementType: 'a',
                                 attributes: {
                                     textContent: 'GitHub - Repository',
-                                    href: 'https://github.com/joanrodriguezhe/BEDU-Grupo11/tree/develop/proyecto-final/frontend',
+                                    href: 'https://github.com/joanrodriguezhe/BEDU-Grupo11/tree/develop/todo-app/',
                                     target: "_blank"
                                 },
                                 classes: ['footerLink']
