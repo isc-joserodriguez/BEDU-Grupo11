@@ -68,7 +68,7 @@ La finalidad del video es ver cómo se aplican los conceptos vistos a lo largo d
     - Organización (código y carpetas).
     - Buenas prácticas (nombres descriptivos, comentarios).
     - Trabajo en equipo (commits, branches, pull requests).
-- [Video](https://www.youtube.com)
+- [Video](https://youtu.be/etMsdDg5bM4)
     - Duración máxima de 5 min.
     - Sin errores de edición.
     - Presentación de cada integrante del equipo (video personal opcional).
