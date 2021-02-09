@@ -3,6 +3,7 @@
 ## Contenido
 - [Postwork Fase 02 Sesión 04](./postwork-F02S04)
 - [Proyecto Final - TODO App](./todo-app)
+- [Video Proyecto](https://youtu.be/etMsdDg5bM4)
 
 ## Autores
 - ##### [Adrian-BT](https://github.com/Adrian-BT)
