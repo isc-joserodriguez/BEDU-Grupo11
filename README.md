@@ -9,7 +9,7 @@
 - ##### [Adrian-BT](https://github.com/Adrian-BT)
 - ##### [NathalyNDC](https://github.com/NathalyNDC)
 - ##### [EAeliasalejandro](https://github.com/EAeliasalejandro)
-- ##### [joanrodriguezhe](https://github.com/joanrodriguezhe)
+- ##### [isc-joserodriguez](https://github.com/isc-joserodriguez)
 
-### [Ir a Repositorio](https://github.com/joanrodriguezhe/BEDU-Grupo11)
+### [Ir a Repositorio](https://github.com/isc-joserodriguez/BEDU-Grupo11)
 ### [Ir a tablero de Trello](https://trello.com/b/9SiK8HwQ/bedu)

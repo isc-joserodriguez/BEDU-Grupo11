@@ -26,7 +26,7 @@ Se puede tomar como referencia el siguiente mockup
 <p align="center">
 
   
-![Mockup](https://raw.githubusercontent.com/joanrodriguezhe/BEDU-Grupo11/develop/docs/mockup.png)
+![Mockup](https://raw.githubusercontent.com/isc-joserodriguez/BEDU-Grupo11/develop/docs/mockup.png)
   
 </p>
 
@@ -53,7 +53,7 @@ Los estilos son libres pero se sugiere no invertir demasiado tiempo en la parte 
 
 <p align="center">
   
-![Ejemplo](https://raw.githubusercontent.com/joanrodriguezhe/BEDU-Grupo11/develop/docs/example-app.gif)
+![Ejemplo](https://raw.githubusercontent.com/isc-joserodriguez/BEDU-Grupo11/develop/docs/example-app.gif)
 </p>
 
 Adicional al desarrollo de la aplicación se debe incluir un video de máximo 5 minutos donde se explique el código y el proceso que siguieron para desarrollar la aplicación. Incluir ejemplos de problemas que tuvieron y cómo los solucionaron. 
@@ -63,7 +63,7 @@ La finalidad del video es ver cómo se aplican los conceptos vistos a lo largo d
 <a name="criterios"></a>
 
 ### Criterios de evaluación
-- [Aplicación (TODO App)](https://joanrodriguezhe.github.io/BEDU-Grupo11/todo-app)
+- [Aplicación (TODO App)](https://isc-joserodriguez.github.io/BEDU-Grupo11/todo-app)
     - Funcionalidad (en cuanto a las user stories y tareas).
     - Organización (código y carpetas).
     - Buenas prácticas (nombres descriptivos, comentarios).
@@ -89,7 +89,7 @@ Se utilizó un chat de Slack para organizar reuniones para trabajar en el proyec
 
 <p align="center">
   
-![Slack](https://raw.githubusercontent.com/joanrodriguezhe/BEDU-Grupo11/develop/docs/slack.jpg)
+![Slack](https://raw.githubusercontent.com/isc-joserodriguez/BEDU-Grupo11/develop/docs/slack.jpg)
 </p>
 
 #### Meet
@@ -97,43 +97,43 @@ Para las reuniones se optó por utilizar Meet de google.
 
 <p align="center">
   
-![Meet](https://raw.githubusercontent.com/joanrodriguezhe/BEDU-Grupo11/develop/docs/meet.jpg)
+![Meet](https://raw.githubusercontent.com/isc-joserodriguez/BEDU-Grupo11/develop/docs/meet.jpg)
 </p>
 
 #### GitHub
-Para una mayor organización con el versionado del código, se utilizó un [repositorio de GitHub](https://github.com/joanrodriguezhe/BEDU-Grupo11).
+Para una mayor organización con el versionado del código, se utilizó un [repositorio de GitHub](https://github.com/isc-joserodriguez/BEDU-Grupo11).
 
 <p align="center">
   
-![GitHub](https://raw.githubusercontent.com/joanrodriguezhe/BEDU-Grupo11/develop/docs/github.gif)
+![GitHub](https://raw.githubusercontent.com/isc-joserodriguez/BEDU-Grupo11/develop/docs/github.gif)
 </p>
 
 Haciendo los respectivos commits.
 
 <p align="center">
   
-![Commits](https://raw.githubusercontent.com/joanrodriguezhe/BEDU-Grupo11/develop/docs/commits.gif)
+![Commits](https://raw.githubusercontent.com/isc-joserodriguez/BEDU-Grupo11/develop/docs/commits.gif)
 </p>
 
 Haciendo uso de ramas 
 
 <p align="center">
   
-![Branches](https://raw.githubusercontent.com/joanrodriguezhe/BEDU-Grupo11/develop/docs/branches.gif)
+![Branches](https://raw.githubusercontent.com/isc-joserodriguez/BEDU-Grupo11/develop/docs/branches.gif)
 </p>
 
 Pull Requests.
 
 <p align="center">
   
-![PR](https://raw.githubusercontent.com/joanrodriguezhe/BEDU-Grupo11/develop/docs/pr.gif)
+![PR](https://raw.githubusercontent.com/isc-joserodriguez/BEDU-Grupo11/develop/docs/pr.gif)
 </p>
 
 Estadisticas del repositorio:
 
 <p align="center">
   
-![insights](https://raw.githubusercontent.com/joanrodriguezhe/BEDU-Grupo11/develop/docs/insights.png)
+![insights](https://raw.githubusercontent.com/isc-joserodriguez/BEDU-Grupo11/develop/docs/insights.png)
 </p>
 
 #### Trello
@@ -141,7 +141,7 @@ Para el seguimiento de tareas, se utilizó [Trello](https://trello.com/b/9SiK8Hw
 
 <p align="center">
   
-![Trello](https://raw.githubusercontent.com/joanrodriguezhe/BEDU-Grupo11/develop/docs/trello.jpg)
+![Trello](https://raw.githubusercontent.com/isc-joserodriguez/BEDU-Grupo11/develop/docs/trello.jpg)
 </p>
 
 <a name="funcionalidad"></a>
@@ -152,49 +152,49 @@ Para el seguimiento de tareas, se utilizó [Trello](https://trello.com/b/9SiK8Hw
 
 <p align="center">
   
-![New Task](https://raw.githubusercontent.com/joanrodriguezhe/BEDU-Grupo11/develop/docs/newTask.gif)
+![New Task](https://raw.githubusercontent.com/isc-joserodriguez/BEDU-Grupo11/develop/docs/newTask.gif)
 </p>
 
 #### Marcar una tarea como completada o incompleta.
 
 <p align="center">
   
-![Check Task](https://raw.githubusercontent.com/joanrodriguezhe/BEDU-Grupo11/develop/docs/checkTask.gif)
+![Check Task](https://raw.githubusercontent.com/isc-joserodriguez/BEDU-Grupo11/develop/docs/checkTask.gif)
 </p>
 
 #### Eliminar una tarea que no necesite.
 
 <p align="center">
   
-![Delete Task](https://raw.githubusercontent.com/joanrodriguezhe/BEDU-Grupo11/develop/docs/deleteTask.gif)
+![Delete Task](https://raw.githubusercontent.com/isc-joserodriguez/BEDU-Grupo11/develop/docs/deleteTask.gif)
 </p>
 
 #### Editar una tarea.
 
 <p align="center">
   
-![Edit Task](https://raw.githubusercontent.com/joanrodriguezhe/BEDU-Grupo11/develop/docs/editTask.gif)
+![Edit Task](https://raw.githubusercontent.com/isc-joserodriguez/BEDU-Grupo11/develop/docs/editTask.gif)
 </p>
 
 #### Mostrar detalles de una tarea.
 
 <p align="center">
   
-![Details Task](https://raw.githubusercontent.com/joanrodriguezhe/BEDU-Grupo11/develop/docs/detailsTask.gif)
+![Details Task](https://raw.githubusercontent.com/isc-joserodriguez/BEDU-Grupo11/develop/docs/detailsTask.gif)
 </p>
 
 #### Filtrar tareas.
 
 <p align="center">
   
-![Filter Task](https://raw.githubusercontent.com/joanrodriguezhe/BEDU-Grupo11/develop/docs/filterTask.gif)
+![Filter Task](https://raw.githubusercontent.com/isc-joserodriguez/BEDU-Grupo11/develop/docs/filterTask.gif)
 </p>
 
 #### Validación de input.
 
 <p align="center">
   
-![Validate Task](https://raw.githubusercontent.com/joanrodriguezhe/BEDU-Grupo11/develop/docs/validateTask.gif)
+![Validate Task](https://raw.githubusercontent.com/isc-joserodriguez/BEDU-Grupo11/develop/docs/validateTask.gif)
 </p>
 
 
@@ -214,4 +214,4 @@ npm run watch
 - ##### [Adrian-BT](https://github.com/Adrian-BT)
 - ##### [NathalyNDC](https://github.com/NathalyNDC)
 - ##### [EAeliasalejandro](https://github.com/EAeliasalejandro)
-- ##### [joanrodriguezhe](https://github.com/joanrodriguezhe)
+- ##### [isc-joserodriguez](https://github.com/isc-joserodriguez)
